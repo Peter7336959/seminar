@@ -1,5 +1,7 @@
 project:
   type: website
+  output-dir: docs
+
 
 website:
   title: "115年國際職業衛生研究趨勢研討會"
