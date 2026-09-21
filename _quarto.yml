@@ -5,11 +5,21 @@ project:
 
 website:
   title: "115年國際職業衛生研究趨勢研討會"
-#  navbar:
-#    left:
-#      - href: index.qmd
-#        text: Home
-#      - about.qmd
+  navbar:
+    background: primary
+    search: true
+    left:
+      - text: "Home"
+        href: index.qmd
+
+  page-footer: 
+    left: "中國勞工安全衛生管理學會 2026-10-20" 
+    background: primary
+  back-to-top-navigation: true
+
+sidebar:
+  - title: "內容"
+
 
 format:
   html:
