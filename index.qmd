@@ -1,7 +1,8 @@
 ---
-title: "115年國際職業衛生研究趨勢研討會"
+title: "115年國際職業衛生趨勢研討會"
 subtitle: "活動簡介與報名簡章"
 date: "2026-10-20"
+date-format: long
 ---
 
 ::: {.callout-warning appearance="simple"}
@@ -74,7 +75,216 @@ date: "2026-10-20"
 
 ## **三、議程**
 
-![](images/clipboard-916410395.png)
+```{=html}
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>議程表</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: "DFKai-SB", "BiauKai", "標楷體", "KaiTi", "楷体", serif;
+      background: #ffffff;
+      letter-spacing: -0.5px;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    .agenda-table {
+      border-collapse: collapse;
+      width: 100%;
+      height: 100%;
+      background: white;
+      border: 2px solid #333;
+    }
+    .agenda-table th,
+    .agenda-table td {
+      border: 1px solid #555;
+      padding: 6px 8px;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 1.05rem;
+      color: #1e2b3a;
+      line-height: 1.25;
+      letter-spacing: -0.5px;
+      font-family: inherit;
+    }
+    .agenda-table th {
+      background: #d9d9d9;
+      font-weight: 700;
+      font-size: 1.15rem;
+      padding: 10px 6px;
+      line-height: 1.2;
+    }
+    /* ===== 時間欄縮到最小 ===== */
+    .agenda-table thead th:first-child {
+      width: 1px;
+      white-space: nowrap;
+      padding: 10px 4px;
+    }
+    .time-col {
+      width: 1px;
+      white-space: nowrap;
+      text-align: center;
+      background: #fff;
+      font-weight: 700;
+      line-height: 1.25;
+      padding: 6px 4px;
+      font-size: 1rem;
+    }
+    /* ========================== */
+
+    /* 分段標題列（淺灰） */
+    .section-header td {
+      background: #d9d9d9;
+      font-weight: 700;
+      font-size: 1.1rem;
+      line-height: 1.2;
+    }
+
+    /* 平行會議：三個議題欄平均分配剩餘寬度 */
+    .parallel-topic {
+      text-align: center;
+      vertical-align: middle;
+      padding: 10px 8px;
+      line-height: 1.3;
+      font-size: 1rem;
+    }
+    .parallel-topic .topic {
+      font-weight: 700;
+      display: block;
+    }
+    .parallel-topic .room {
+      font-weight: 700;
+      display: block;
+      margin-top: 2px;
+    }
+  </style>
+</head>
+<body>
+  <table class="agenda-table">
+    <!-- 定義欄寬：時間欄 1px，其餘三欄平均分配 -->
+    <colgroup>
+      <col style="width: 1px;">
+      <col style="width: 33.33%;">
+      <col style="width: 33.33%;">
+      <col style="width: 33.33%;">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>時間</th>
+        <th colspan="3">議程</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- 報到 -->
+      <tr>
+        <td class="time-col">0900-0930（30分鐘）</td>
+        <td colspan="3">報到</td>
+      </tr>
+      <!-- 貴賓致詞 + 合影 -->
+      <tr>
+        <td class="time-col" rowspan="2">0930-0950（20分鐘）</td>
+        <td colspan="3">貴賓致詞</td>
+      </tr>
+      <tr>
+        <td colspan="3">出席貴賓合影</td>
+      </tr>
+
+      <!-- 分段標題 1 -->
+      <tr class="section-header">
+        <td colspan="4">【重要職業衛生議題分享1】 R101</td>
+      </tr>
+
+      <!-- 議題一 -->
+      <tr>
+        <td class="time-col">0950-1030（40分鐘）</td>
+        <td colspan="3">議題一　國外專家學者1</td>
+      </tr>
+      <!-- Q&A 1 -->
+      <tr>
+        <td class="time-col">1030-1040（20分鐘）</td>
+        <td colspan="3">Q &amp; A</td>
+      </tr>
+
+      <!-- 分段標題 2 -->
+      <tr class="section-header">
+        <td colspan="4">【重要職業衛生議題分享2】 R101</td>
+      </tr>
+
+      <!-- 議題二 -->
+      <tr>
+        <td class="time-col">1050-1140（40分鐘）</td>
+        <td colspan="3">議題二　國外專家學者2</td>
+      </tr>
+      <!-- Q&A 2 -->
+      <tr>
+        <td class="time-col">1140-1150（20分鐘）</td>
+        <td colspan="3">Q &amp; A</td>
+      </tr>
+
+      <!-- 午休 -->
+      <tr>
+        <td class="time-col">1200-1300（60分鐘）</td>
+        <td colspan="3">午休（含用餐）</td>
+      </tr>
+
+      <!-- 分段標題 3~5 -->
+      <tr class="section-header">
+        <td colspan="4">【重要職業衛生議題分享3~5】</td>
+      </tr>
+
+      <!-- 平行會議：議題三、四、五（三欄並排，平均分配寬度） -->
+      <tr>
+        <td class="time-col">1300-1350（40分鐘）</td>
+        <td class="parallel-topic">
+          <span class="topic">議題三　生物性危害</span>
+          （張靜文教授）<br>
+          <span class="room">(R203)</span>
+        </td>
+        <td class="parallel-topic">
+          <span class="topic">議題四　熱危害與趨勢</span>
+          （莊侑哲教授）<br>
+          <span class="room">(R101)</span>
+        </td>
+        <td class="parallel-topic">
+          <span class="topic">議題五　化學性議題</span>
+          （蔡朋枝教授）<br>
+          <span class="room">(R103)</span>
+        </td>
+      </tr>
+
+      <!-- 綜合 Q&A -->
+      <tr>
+        <td class="time-col">1350-1410（20分鐘）</td>
+        <td colspan="3">Q &amp; A</td>
+      </tr>
+
+      <!-- 閉幕致詞 + 合影 -->
+      <tr>
+        <td class="time-col">1410-1450（40分鐘）</td>
+        <td colspan="3">閉幕致詞+合影</td>
+      </tr>
+
+      <!-- 賦歸 -->
+      <tr>
+        <td class="time-col">1500</td>
+        <td colspan="3">賦歸</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
+```
 
 ## **四、提醒事項**
 

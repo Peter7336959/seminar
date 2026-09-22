@@ -2,23 +2,19 @@ project:
   type: website
   output-dir: docs
 
-
 website:
-  title: "115年國際職業衛生研究趨勢研討會"
+  title: "115年國際職業衛生趨勢研討會"
+  page-navigation: false
+  bread-crumbs: false
+  back-to-top-navigation: true
+#  page-footer:
+#      center: "中國勞工安全衛生管理學會 2026-10-20"
+      
   navbar:
     background: primary
     search: true
-    left:
-      - text: "Home"
-        href: index.qmd
 
-  page-footer: 
-    left: "中國勞工安全衛生管理學會 2026-10-20" 
-    background: primary
-  back-to-top-navigation: true
 
-sidebar:
-  - title: "內容"
 
 
 format:
@@ -30,4 +26,3 @@ format:
     toc: true
 
 editor: visual
-
