@@ -148,7 +148,7 @@ This symposium invites experts from industry, government, academia, and research
             <td>10:50–11:40 (40 min)</td>
             <td>
                 Topic 2: Heat Stress<br>
-                <a href="https://cir.nii.ac.jp/crid/1420001326222742016?lang=en" target="_blank" rel="noopener noreferrer">Nagano Chikage</a>
+                <a href="https://cir.nii.ac.jp/crid/1420001326222742016?lang=en" target="_blank" rel="noopener noreferrer">Dr. Nagano Chikage</a>
             </td>
         </tr>
         <tr>
@@ -184,7 +184,7 @@ This symposium invites experts from industry, government, academia, and research
                         <td style="border:none; width:33.33%;" class="track-cell">
                             <div class="track-title">Topic 5: Chemical Issues</div>
                             <div class="track-detail">
-                                (<a href="https://researchoutput.ncku.edu.tw/zh/persons/perng-jy-tsai/" target="_blank" rel="noopener noreferrer">Professor Perng-Jy Tsai</a>)<br>
+                                (<a href="https://researchoutput.ncku.edu.tw/zh/persons/perng-jy-tsai/" target="_blank" rel="noopener noreferrer">Professor Tsai Peng-Chih</a>)<br>
                                 (R103)
                             </div>
                         </td>
