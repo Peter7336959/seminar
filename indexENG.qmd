@@ -1,0 +1,239 @@
+---
+title: "2026 International Occupational Health Trends Symposium"
+subtitle: " Event Introduction and Registration Information"
+date: "2026-10-20"
+date-format: long
+---
+
+::: {.callout-warning appearance="simple"}
+This webpage is currently undergoing layout testing; the content is subject to the official announcement.
+:::
+
+**Supervising Agency**: Institute of Labor, Occupational Safety and Health ([ILOSH](https://www.ilosh.gov.tw/)), Ministry of Labor
+
+**Organizer**: Chinese Occupational Safety and Health Management Association ([CHSM.org](https://www.cshm.org.tw/))
+
+## **1.** Background of the Event
+
+::: {.callout-note appearance="simple"}
+In recent years, rapid changes in work environments, climate, and technology have posed unprecedented challenges to Occupational and Environmental Health and Safety (OEHS). This symposium was organized in response to emerging occupational health concerns and strategic directions in Taiwan, with reference to international professional organizations such as AIHA, BOHS, and IOHA.
+
+Key international trends include:
+
+1.  **Climate Change and Extreme Exposure** – Rising global temperatures increase heat injury risks for outdoor and high-temperature workers. AIHA, BOHS, and IOHA are advancing heat stress assessment and prevention. Climate change also brings wildfire-related air pollution and biological hazards like mold and infectious agents.
+
+2.  **Sustainability and Emerging Chemical Hazards** – Engineered stone processing has caused severe accelerated silicosis, prompting BOHS to advocate stronger controls. Emerging threats such as PFAS and flame retardants (e.g., TBBPA) are gaining attention, alongside smart PPE and big data predictive analytics.
+
+3.  **Total Worker Health (TWH)** – Advocated by NIOSH and prioritized by AIHA, TWH expands occupational health beyond traditional hazards to include non-traditional workers (gig economy, remote work), excessive working hours, psychosocial stress, and ergonomic injuries (e.g., HAVS).
+
+4.  **AI and Smart Monitoring** – AI, sensors, and big data enable real-time monitoring of hazardous gases and noise, but raise ethical issues around worker privacy and IH data standardization.
+
+5.  **Next-Generation Occupational Health Strategies** – IOHA estimates global demand for qualified OEHS professionals at \~44,000 versus only \~20,000 available. AIHA's 2026 Strategy and BOHS's 2026–2030 Strategy prioritize "Prevention-First" and capacity building in emerging regions. Their shared direction includes: strengthening prevention-first science and practice (e.g., PGPs for thermal stress and lithium battery fire exposure); expanding professional influence and public policy advocacy; enhancing transnational leadership and local OEHS capacity; and advancing organizational excellence, digital transformation, and agile governance.
+
+6.  **Domestic Research and Development** – Taiwan faces challenges linked to international trends, including climate change, new chemical and engineered stone dust hazards, and diverse labor patterns. Learning from AIHA, BOHS, and IOHA can help Taiwan align with international research and policy directions. International exchange also enhances Taiwan's visibility and partnerships in the global OEHS field.
+
+This symposium invites experts from industry, government, academia, and research institutions to share domestic and international research findings, policy experiences, and practical perspectives, serving as a reference for Taiwan's future research, policy planning, and implementation.
+:::
+
+## **2. Event Information**
+
+::: {.callout-tip appearance="simple"}
+- **Supervising Agency:** Institute of Labor, Occupational Safety and Health (ILOSH), Ministry of Labor
+
+- **Organizer:** Chinese Association of Labor Safety and Health Management
+
+- **Participants:** Staff from theILOSH, the Occupational Safety and Health Administration (OSHA), labor inspection agencies, occupational safety and health personnel from enterprises, certified occupational safety and health technicians, and personnel from workplace environmental monitoring institutions
+
+- **Date, Venue, and Capacity:** Tuesday, November 10, 2026 (Taipei Taiwan ), 9:00–15:00
+
+  - **Venue:** Howard International House – Rooms R101–R103 / 60 participants
+
+  - (1F, No. 30, Section 3, Xinsheng South Road, Longpo Village, Da'an District, Taipei City)
+
+- **Registration Period:** From October 20, 2026 (tentative) to October 25, 2026
+
+- **Fee and Registration Method:** Free of charge. Online registration required; confirmation will be sent by email.
+
+- **Registration Link:** [Google Registration Form](https://docs.google.com/forms/d/e/1FAIpQLSdVc3K6VCUo2zdH1Dqsxn3VdvGn-kUcxiqp3BzKNRcJMXxtGQ/viewform)
+:::
+
+## 3. Agenda
+
+```{=html}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Symposium Agenda</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        th {
+            background-color: #d9d9d9;
+            font-weight: bold;
+        }
+        .session-header {
+            background-color: #d9d9d9;
+            font-weight: bold;
+        }
+        .track-cell {
+            text-align: center;
+        }
+        .track-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .track-detail {
+            font-size: 13px;
+        }
+        .track-detail a {
+            color: #1a0dab;
+            text-decoration: none;
+        }
+        .track-detail a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <thead>
+        <tr>
+            <th style="width: 20%;">Time</th>
+            <th style="width: 80%;">Agenda</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>09:00–09:30 (30 min)</td>
+            <td>Registration</td>
+        </tr>
+        <tr>
+            <td>09:30–09:50 (20 min)</td>
+            <td>
+                Opening Remarks by Distinguished Guests<br>
+                Group Photo with Distinguished Guests
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="session-header">【Sharing of Key Occupational Health Topics 1】 R103</td>
+        </tr>
+        <tr>
+            <td>09:50–10:30 (40 min)</td>
+            <td>Topic 1: International Expert/Scholar 1</td>
+        </tr>
+        <tr>
+            <td>10:30–10:40 (20 min)</td>
+            <td>Q &amp; A</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="session-header">【Sharing of Key Occupational Health Topics 2】 R103</td>
+        </tr>
+        <tr>
+            <td>10:50–11:40 (40 min)</td>
+            <td>Topic 2: International Expert/Scholar 2</td>
+        </tr>
+        <tr>
+            <td>11:40–11:50 (20 min)</td>
+            <td>Q &amp; A</td>
+        </tr>
+        <tr>
+            <td>12:00–13:00 (60 min)</td>
+            <td>Lunch Break (Meal Provided)</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="session-header">【Sharing of Key Occupational Health Topics 3–5】</td>
+        </tr>
+        <tr>
+            <td>13:00–13:50 (40 min)</td>
+            <td>
+                <table style="width:100%; border:none; border-collapse:collapse;">
+                    <tr>
+                        <td style="border:none; width:33.33%;" class="track-cell">
+                            <div class="track-title">Topic 3: Biological Hazards</div>
+                            <div class="track-detail">
+                                (<a href="https://scholars.lib.ntu.edu.tw/entities/person/09c062fd-de39-48c1-a2e9-a90761a31c2a" target="_blank">Professor Chang Ching-Wen</a>)<br>
+                                (R203)
+                            </div>
+                        </td>
+                        <td style="border:none; width:33.33%;" class="track-cell">
+                            <div class="track-title">Topic 4: Heat Hazards and Trends</div>
+                            <div class="track-detail">
+                                (<a href="https://cweb.cjcu.edu.tw/ep/%2beLU1cqqhZ8kN4qjQcmhwQ2" target="_blank">Professor Chuang Yu-Che</a>)<br>
+                                (R101)
+                            </div>
+                        </td>
+                        <td style="border:none; width:33.33%;" class="track-cell">
+                            <div class="track-title">Topic 5: Chemical Issues</div>
+                            <div class="track-detail">
+                                (<a href="https://researchoutput.ncku.edu.tw/zh/persons/perng-jy-tsai/" target="_blank">Professor Tsai Peng-Chih</a>)<br>
+                                (R103)
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>13:50–14:10 (20 min)</td>
+            <td>Q &amp; A</td>
+        </tr>
+        <tr>
+            <td>14:10–14:50 (40 min)</td>
+            <td>Closing Remarks + Group Photo</td>
+        </tr>
+        <tr>
+            <td>15:00</td>
+            <td>Adjournment</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
+```
+
+## 4. Reminders
+
+::: {.callout-caution appearance="simple"}
+1.  The Organizer reserves the right to modify or change the event content, time, venue, and related matters. In the event of natural disasters, government policy adjustments, or other force majeure factors before or on the day of the event, the Organizer may postpone, cancel, or terminate the event depending on the actual circumstances.
+
+    For any questions regarding registration, please contact Mr. Huang at the Chinese Association of Labor Safety and Health Management, the Organizer of this event. Contact number: 886-(02) 2321-1518 ext. 52.
+:::
+
+## **5. Transportation Information**
+
+::: {.callout-important appearance="simple"}
+**MRT**
+
+◎ Songshan-Xindian Line: Take the MRT to Taipower Building Station, Exit 2. The venue is a 10–15 minute walk from the station.
+
+**Bus**
+
+◎ Long'an Elementary School: 52, 253, 280, 284, 290, 311, 505, 907, 0 South, Zhinan 1
+
+◎ Daan Forest Park: 3, 15, 18, 52, 72, 74, 211, 235, 237, 278, 295, 626
+
+◎ Heping & Xinsheng Intersection: 253, 280, 290, 311, 505, 642, 0 South, Zhinan 1, Zhinan 5
+
+◎ Wenzhou Street Intersection: 3, 15, 18, 74, 235, 237, 254, 278, 295, 907, 291, 672
+
+◎ Civil Service Development Institute: 52, 253, 280, 284, 290, 291, 311, 505, 642, 907, 0 South, Zhinan 1
+:::
+
+```{=html}
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57846.05293850923!2d121.50850845855001!3d25.02123249153242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9887ff09895%3A0xcf121b78ea5b7bfd!2z56aP6I-v5ZyL6Zqb5paH5pWZ5pyD6aSo!5e0!3m2!1szh-TW!2stw!4v1789688606902!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+```
+
+## 6. Seminar Handbook Download ([Chinese version](會議手冊草稿(廠商參考用).pdf))
