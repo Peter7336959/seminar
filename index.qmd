@@ -68,9 +68,9 @@ date-format: long
 
     - 報名日期：115-10-20(預計)起至115-10-25止
 
-5.  費用及報名方式：免費，採線上報名後電子郵件通知。
+5.  費用及報名方式：免費，**採線上報名後電子郵件通知**。
 
-6.  報名連結：[google 報名表單](https://docs.google.com/forms/d/e/1FAIpQLSdVc3K6VCUo2zdH1Dqsxn3VdvGn-kUcxiqp3BzKNRcJMXxtGQ/viewform)
+6.  線上報名連結：[google 報名表單](https://docs.google.com/forms/d/e/1FAIpQLSdVc3K6VCUo2zdH1Dqsxn3VdvGn-kUcxiqp3BzKNRcJMXxtGQ/viewform) (報名成功以電子郵件通知並公告)
 :::
 
 ## **三、議程**
