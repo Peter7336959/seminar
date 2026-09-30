@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.21">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,10 +10,16 @@
 
 <title>2026 International Occupational Health Trends Symposium – 115年國際職業衛生趨勢研討會 / 2026 International Occupational Health Trends Symposium</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -33,15 +39,14 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea1d7ac60288e0f1efdbc993fd8432ae.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-029b10fc0dc652dab2ec1ac156c1a037.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-6191c8c4c757b97205a8995aa6c30869.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -81,8 +86,6 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">115年國際職業衛生趨勢研討會 / 2026 International Occupational Health Trends Symposium</span>
     </a>
@@ -304,7 +307,7 @@ Group Photo with Distinguished Guests</td>
 </tr>
 <tr class="odd">
 <td>10:50–11:40 (40 min)</td>
-<td>Topic 2: Heat Stress<br>
+<td>Topic 2: Heat Stress (Pending)<br>
 <a href="https://cir.nii.ac.jp/crid/1420001326222742016?lang=en" target="_blank" rel="noopener noreferrer">Dr. Nagano Chikage</a></td>
 </tr>
 <tr class="even">
@@ -329,17 +332,17 @@ Group Photo with Distinguished Guests</td>
 <tbody>
 <tr class="odd">
 <td class="track-cell" style="border: none; width: 33.33%"><div class="track-title">
-Topic 3: Biological Hazards
+Topic 3: Pending
 </div>
 <div class="track-detail">
-(<a href="https://scholars.lib.ntu.edu.tw/entities/person/09c062fd-de39-48c1-a2e9-a90761a31c2a" target="_blank" rel="noopener noreferrer">Professor Chang Ching-Wen</a>)<br>
+(<a href="#" target="_blank" rel="noopener noreferrer">Professor OOO</a> )<br>
 (R203)
 </div></td>
 <td class="track-cell" style="border: none; width: 33.33%"><div class="track-title">
-Topic 4: Heat Hazards and Trends
+Topic 4: Pending
 </div>
 <div class="track-detail">
-(<a href="https://cweb.cjcu.edu.tw/ep/%2beLU1cqqhZ8kN4qjQcmhwQ2" target="_blank" rel="noopener noreferrer">Professor Chuang Yu-Che</a>)<br>
+(<a href="#" target="_blank" rel="noopener noreferrer">Professor OOO</a>)<br>
 (R101)
 </div></td>
 <td class="track-cell" style="border: none; width: 33.33%"><div class="track-title">
@@ -467,13 +470,14 @@ Topic 5: Chemical Issues
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

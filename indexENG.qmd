@@ -147,7 +147,7 @@ This symposium invites experts from industry, government, academia, and research
         <tr>
             <td>10:50–11:40 (40 min)</td>
             <td>
-                Topic 2: Heat Stress<br>
+                Topic 2: Heat Stress (Pending)<br>
                 <a href="https://cir.nii.ac.jp/crid/1420001326222742016?lang=en" target="_blank" rel="noopener noreferrer">Dr. Nagano Chikage</a>
             </td>
         </tr>
@@ -168,16 +168,16 @@ This symposium invites experts from industry, government, academia, and research
                 <table style="width:100%; border:none; border-collapse:collapse;">
                     <tr>
                         <td style="border:none; width:33.33%;" class="track-cell">
-                            <div class="track-title">Topic 3: Biological Hazards</div>
+                            <div class="track-title">Topic 3: Pending </div>
                             <div class="track-detail">
-                                (<a href="https://scholars.lib.ntu.edu.tw/entities/person/09c062fd-de39-48c1-a2e9-a90761a31c2a" target="_blank" rel="noopener noreferrer">Professor Chang Ching-Wen</a>)<br>
+                                (<a href="#" target="_blank" rel="noopener noreferrer">Professor OOO </a>)<br>
                                 (R203)
                             </div>
                         </td>
                         <td style="border:none; width:33.33%;" class="track-cell">
-                            <div class="track-title">Topic 4: Heat Hazards and Trends</div>
+                            <div class="track-title">Topic 4: Pending </div>
                             <div class="track-detail">
-                                (<a href="https://cweb.cjcu.edu.tw/ep/%2beLU1cqqhZ8kN4qjQcmhwQ2" target="_blank" rel="noopener noreferrer">Professor Chuang Yu-Che</a>)<br>
+                                (<a href="#" target="_blank" rel="noopener noreferrer">Professor OOO</a>)<br>
                                 (R101)
                             </div>
                         </td>

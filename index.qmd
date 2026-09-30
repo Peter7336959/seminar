@@ -217,8 +217,8 @@ date-format: long
 <tr>
 <td class="time-col">0950-1030（40分鐘）</td>
 <td colspan="3">
-  議題一　近期日本化學物質管理法規修正與暴露評估方法<br>
-  <a href="https://www.linkedin.com/in/haruo-hashimoto-0005a789/" target="_blank" rel="noopener noreferrer">Dr. Haruo Hashimoto</a>
+議題一　近期日本化學物質管理法規修正與暴露評估方法<br>
+<a href="https://www.linkedin.com/in/haruo-hashimoto-0005a789/" target="_blank" rel="noopener noreferrer">Dr. Haruo Hashimoto</a>
 </td>
 </tr>
 <!-- Q&A 1 -->
@@ -236,8 +236,8 @@ date-format: long
 <tr>
 <td class="time-col">1050-1140（40分鐘）</td>
 <td colspan="3">
-  議題二　熱危害<br>
-  <a href="https://cir.nii.ac.jp/crid/1420001326222742016?lang=en" target="_blank" rel="noopener noreferrer">Dr. Nagano Chikage</a>
+議題二　熱危害(待定)<br>
+<a href="https://cir.nii.ac.jp/crid/1420001326222742016?lang=en" target="_blank" rel="noopener noreferrer">Dr. Nagano Chikage</a>
 </td>
 </tr>
 <!-- Q&A 2 -->
@@ -261,19 +261,19 @@ date-format: long
 <tr>
 <td class="time-col">1300-1350（40分鐘）</td>
 <td class="parallel-topic">
-  <span class="topic">議題三　生物性危害</span>
-  (<a href="https://scholars.lib.ntu.edu.tw/entities/person/09c062fd-de39-48c1-a2e9-a90761a31c2a" target="_blank" rel="noopener noreferrer">張靜文教授</a>)<br>
-  <span class="room">(R203)</span>
+<span class="topic">議題三　待定</span>
+(<a href="#"> OOO 教授</a>)<br>
+<span class="room">(R203)</span>
 </td>
 <td class="parallel-topic">
-  <span class="topic">議題四　熱危害與趨勢</span>
-  (<a href="https://cweb.cjcu.edu.tw/ep/%2beLU1cqqhZ8kN4qjQcmhwQ2" target="_blank" rel="noopener noreferrer">莊侑哲教授</a>)<br>
-  <span class="room">(R101)</span>
+<span class="topic">議題四　待定</span>
+(<a href="#">OOO 教授</a>)<br>
+<span class="room">(R101)</span>
 </td>
 <td class="parallel-topic">
-  <span class="topic">議題五　化學性議題</span>
-  (<a href="https://researchoutput.ncku.edu.tw/zh/persons/perng-jy-tsai/" target="_blank" rel="noopener noreferrer">蔡朋枝教授</a>)<br>
-  <span class="room">(R103)</span>
+<span class="topic">議題五　化學性議題</span>
+(<a href="https://researchoutput.ncku.edu.tw/zh/persons/perng-jy-tsai/" target="_blank" rel="noopener noreferrer">蔡朋枝教授</a>)<br>
+<span class="room">(R103)</span>
 </td>
 </tr>
 
