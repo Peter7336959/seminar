@@ -229,7 +229,7 @@ date-format: long
 </tr>
 <!-- Q&A 1 -->
 <tr>
-<td class="time-col">1030-1040（20分鐘）</td>
+<td class="time-col">1030-1050（20分鐘）</td>
 <td colspan="3">Q &amp; A</td>
 </tr>
 
@@ -240,7 +240,7 @@ date-format: long
 
 <!-- 議題二 -->
 <tr>
-<td class="time-col">1050-1140（40分鐘）</td>
+<td class="time-col">1050-1130（40分鐘）</td>
 <td colspan="3">
 議題二　熱危害<span class="tbd">(待定)</span><br>
 <a href="https://cir.nii.ac.jp/crid/1420001326222742016?lang=en" target="_blank" rel="noopener noreferrer">Dr. Nagano Chikage</a>
@@ -248,13 +248,13 @@ date-format: long
 </tr>
 <!-- Q&A 2 -->
 <tr>
-<td class="time-col">1140-1150（20分鐘）</td>
+<td class="time-col">1130-1150（20分鐘）</td>
 <td colspan="3">Q &amp; A</td>
 </tr>
 
 <!-- 午休 -->
 <tr>
-<td class="time-col">1200-1300（60分鐘）</td>
+<td class="time-col">1150-1300（70分鐘）</td>
 <td colspan="3">午休（含用餐）</td>
 </tr>
 
@@ -265,7 +265,7 @@ date-format: long
 
 <!-- 平行會議：議題三、四、五（三欄並排，平均分配寬度） -->
 <tr>
-<td class="time-col">1300-1350（40分鐘）</td>
+<td class="time-col">1300-1340（40分鐘）</td>
 <td class="parallel-topic">
 <span class="topic">議題三　<span class="tbd">待定</span></span>
 (<a href="#"> OOO 教授</a>)<br>
@@ -285,19 +285,19 @@ date-format: long
 
 <!-- 綜合 Q&A -->
 <tr>
-<td class="time-col">1350-1410（20分鐘）</td>
+<td class="time-col">1340-1400（20分鐘）</td>
 <td colspan="3">Q &amp; A</td>
 </tr>
 
 <!-- 閉幕致詞 + 合影 -->
 <tr>
-<td class="time-col">1410-1450（40分鐘）</td>
+<td class="time-col">1400-1440（40分鐘）</td>
 <td colspan="3">閉幕致詞+合影</td>
 </tr>
 
 <!-- 賦歸 -->
 <tr>
-<td class="time-col">1500</td>
+<td class="time-col">1440</td>
 <td colspan="3">賦歸</td>
 </tr>
 </tbody>
