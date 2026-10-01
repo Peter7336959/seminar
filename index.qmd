@@ -1,7 +1,7 @@
 ---
 title: "115年國際職業衛生趨勢研討會"
 subtitle: "活動簡介與報名簡章"
-date: "2026-10-20"
+date: "2026-10-09"
 date-format: long
 ---
 
@@ -222,9 +222,9 @@ date-format: long
 <!-- 議題一 -->
 <tr>
 <td class="time-col">0950-1030（40分鐘）</td>
-<td colspan="3">
+<td colspan="3"><b>
 議題一　近期日本化學物質管理法規修正與暴露評估方法<br>
-<a href="https://www.linkedin.com/in/haruo-hashimoto-0005a789/" target="_blank" rel="noopener noreferrer">Dr. Haruo Hashimoto</a>
+<a href="https://www.linkedin.com/in/haruo-hashimoto-0005a789/" target="_blank" rel="noopener noreferrer">Dr. Haruo Hashimoto</a></b>
 </td>
 </tr>
 <!-- Q&A 1 -->
@@ -241,9 +241,9 @@ date-format: long
 <!-- 議題二 -->
 <tr>
 <td class="time-col">1050-1130（40分鐘）</td>
-<td colspan="3">
-議題二　熱危害<span class="tbd">(待定)</span><br>
-<a href="https://cir.nii.ac.jp/crid/1420001326222742016?lang=en" target="_blank" rel="noopener noreferrer">Dr. Nagano Chikage</a>
+<td colspan="3"> <b>
+議題二　近期日本熱引起相關疾病預防方法<br>
+<a href="https://cir.nii.ac.jp/crid/1420001326222742016?lang=en" target="_blank" rel="noopener noreferrer">Dr. Nagano Chikage</a></b>
 </td>
 </tr>
 <!-- Q&A 2 -->
@@ -277,8 +277,8 @@ date-format: long
 <span class="room">(R101)</span>
 </td>
 <td class="parallel-topic">
-<span class="topic">議題五　化學性議題</span>
-(<a href="https://researchoutput.ncku.edu.tw/zh/persons/perng-jy-tsai/" target="_blank" rel="noopener noreferrer">蔡朋枝教授</a>)<br>
+<span class="topic"><b>議題五　化學性議題</span>
+(<a href="https://researchoutput.ncku.edu.tw/zh/persons/perng-jy-tsai/" target="_blank" rel="noopener noreferrer">蔡朋枝教授</a>)</b><br>
 <span class="room">(R103)</span>
 </td>
 </tr>
