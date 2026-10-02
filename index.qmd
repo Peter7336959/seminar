@@ -288,7 +288,7 @@ date-format: long
 </td>
 <td class="parallel-topic">
 <span class="topic"><b>議題五　重大化學風險管理的新趨勢：從 SDS 危害資訊深化到 QRA 持續重評</span>
-(<a href="＃">林韋呈博士</a>)</b><br>
+林韋呈博士</b><br>
 <span class="room">(R103)</span>
 </td>
 </tr>
