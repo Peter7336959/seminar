@@ -205,11 +205,7 @@ This symposium invites experts from industry, government, academia, and research
                             </div>
                         </td>
                         <td style="border:none; width:33.33%;" class="track-cell">
-                            <div class="track-title">Topic 5: Chemical Issues</div>
-                            <div class="track-detail">
-                                (<a href="https://researchoutput.ncku.edu.tw/zh/persons/perng-jy-tsai/" target="_blank" rel="noopener noreferrer">Professor Tsai Peng-Chih</a>)<br>
-                                (R103)
-                            </div>
+                            <div class="track-title">Topic 5: 從 SDS 危害資訊深化到 QRA 持續重評<br>林韋呈博士<br>(R103)</div>
                         </td>
                     </tr>
                 </table>

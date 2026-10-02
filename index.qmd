@@ -287,8 +287,8 @@ date-format: long
 <span class="room">(R101)</span>
 </td>
 <td class="parallel-topic">
-<span class="topic"><b>議題五　化學性議題</span>
-(<a href="https://researchoutput.ncku.edu.tw/zh/persons/perng-jy-tsai/" target="_blank" rel="noopener noreferrer">蔡朋枝教授</a>)</b><br>
+<span class="topic"><b>議題五　重大化學風險管理的新趨勢：從 SDS 危害資訊深化到 QRA 持續重評</span>
+(<a href="＃">林韋呈博士</a>)</b><br>
 <span class="room">(R103)</span>
 </td>
 </tr>
