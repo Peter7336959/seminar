@@ -72,11 +72,11 @@ This symposium invites experts from industry, government, academia, and research
             border-collapse: collapse;
             font-family: Arial, sans-serif;
             font-size: 14px;
-            table-layout: fixed;   /* 新增 */
+            table-layout: fixed;
         }
         th:first-child,
         td:first-child {
-            width: 12%;            /* 時間欄位寬度 */
+            width: 12%;
             white-space: nowrap;
         }
 
@@ -87,9 +87,10 @@ This symposium invites experts from industry, government, academia, and research
             vertical-align: middle;
         }
 
+        /* ===== 表頭：灰底粗體 ===== */
         th {
-            background-color: #d9d9d9; !important;
-            font-weight: bold;
+            background-color: #d9d9d9 !important;
+            font-weight: bold !important;
         }
 
         /* ===== Session Header：灰底粗字 ===== */
