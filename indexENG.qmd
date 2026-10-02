@@ -57,7 +57,7 @@ This symposium invites experts from industry, government, academia, and research
 - **Registration Link:** [Google Registration Form](https://docs.google.com/forms/d/e/1FAIpQLSdVc3K6VCUo2zdH1Dqsxn3VdvGn-kUcxiqp3BzKNRcJMXxtGQ/viewform) (registration will be confirmed and notified via email, then anounced here)
 :::
 
-## 3. Agenda
+## **3. Agenda**
 
 ```{=html}
 <!DOCTYPE html>
@@ -83,9 +83,11 @@ This symposium invites experts from industry, government, academia, and research
             background-color: #d9d9d9;
             font-weight: bold;
         }
-        .session-header {
-            background-color: #d9d9d9;
-            font-weight: bold;
+        .session-header td {
+          background: #d9d9d9;
+          font-weight: normal;
+          font-size: 1 rem;
+          line-height: 1.2;
         }
         .track-cell {
             text-align: center;
@@ -134,7 +136,7 @@ This symposium invites experts from industry, government, academia, and research
             </td>
         </tr>
         <tr>
-            <td colspan="2" class="session-header">【Sharing of Key Occupational Health Topics 1】 R103</td>
+            <td colspan="2" class="session-header">【Key Occupational Health Topics 1】 R103</td>
         </tr>
         <tr>
             <td>09:50–10:30 (40 min)</td>
@@ -148,7 +150,7 @@ This symposium invites experts from industry, government, academia, and research
             <td>Q &amp; A</td>
         </tr>
         <tr>
-            <td colspan="2" class="session-header">【Sharing of Key Occupational Health Topics 2】 R103</td>
+            <td colspan="2" class="session-header">【Key Occupational Health Topics 2】 R103</td>
         </tr>
         <tr>
             <td>10:50–11:30 (40 min)</td>
@@ -166,7 +168,7 @@ This symposium invites experts from industry, government, academia, and research
             <td>Lunch Break (Meal Provided)</td>
         </tr>
         <tr>
-            <td colspan="2" class="session-header">【Sharing of Key Occupational Health Topics 3–5】</td>
+            <td colspan="2" class="session-header">【Key Occupational Health Topics 3–5】</td>
         </tr>
         <tr>
             <td>13:00–13:40 (40 min)</td>
@@ -217,7 +219,7 @@ This symposium invites experts from industry, government, academia, and research
 </html>
 ```
 
-## 4. Reminders
+## **4. Reminders**
 
 ::: {.callout-caution appearance="simple"}
 1.  The Organizer reserves the right to modify or change the event content, time, venue, and related matters. In the event of natural disasters, government policy adjustments, or other force majeure factors before or on the day of the event, the Organizer may postpone, cancel, or terminate the event depending on the actual circumstances.
@@ -249,4 +251,4 @@ This symposium invites experts from industry, government, academia, and research
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57846.05293850923!2d121.50850845855001!3d25.02123249153242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9887ff09895%3A0xcf121b78ea5b7bfd!2z56aP6I-v5ZyL6Zqb5paH5pWZ5pyD6aSo!5e0!3m2!1szh-TW!2stw!4v1789688606902!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 ```
 
-## 6. Seminar Handbook Download ([Chinese version](會議手冊草稿(廠商參考用).pdf))
+## **6. Seminar Handbook Download ([Chinese version](會議手冊草稿(廠商參考用).pdf))**
