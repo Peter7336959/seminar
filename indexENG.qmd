@@ -63,169 +63,206 @@ This symposium invites experts from industry, government, academia, and research
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Symposium Agenda</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            table-layout: fixed;
-        }
-        th:first-child,
-        td:first-child {
-            width: 12%;
-            white-space: nowrap;
-        }
-
-        th, td {
-            border: 1px solid #333;
-            padding: 10px;
-            text-align: center;
-            vertical-align: middle;
-        }
-
-        /* ===== 表頭：灰底粗體 ===== */
-        th {
-            background-color: #d9d9d9 !important;
-            font-weight: bold !important;
-        }
-
-        /* ===== Session Header：灰底粗字 ===== */
-        .session-header {
-            background-color: #d9d9d9 !important;
-            font-weight: bold !important;
-            font-size: 0.8rem;
-            line-height: 1.2;
-        }
-
-        .track-cell {
-            text-align: center;
-        }
-
-        .track-title {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .track-detail {
-            font-size: 13px;
-        }
-
-        td a {
-            color: #1a0dab;
-            text-decoration: none;
-        }
-
-        td a:hover {
-            text-decoration: underline;
-        }
-
-        /* ===== Pending：紅字粗體 ===== */
-        .pending {
-            color: #cc0000;
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Occupational Health Seminar Agenda</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      background: #f0f2f5;
+      color: #333;
+      padding: 30px 15px;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 30px;
+      border-radius: 8px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      color: #1a3a5c;
+      margin-bottom: 25px;
+      letter-spacing: 1px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+      border: 2px solid #aaa;
+    }
+    th, td {
+      border: 1px solid #aaa;
+      padding: 12px 15px;
+      vertical-align: middle;
+    }
+    thead th {
+      background-color: #e0e0e0;
+      color: #000;
+      font-weight: bold;
+      text-align: center;
+      font-size: 16px;
+      padding: 14px;
+    }
+    .time-col {
+      width: 180px;
+      text-align: center;
+      font-weight: normal;
+      white-space: nowrap;
+    }
+    .session-header {
+      background-color: #e0e0e0;
+      font-weight: bold;
+      text-align: center;
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+    .topic-cell {
+      text-align: center;
+      line-height: 1.8;
+    }
+    .speaker-name {
+      color: #0044cc;
+      font-weight: bold;
+    }
+    .break-cell {
+      text-align: center;
+      font-weight: bold;
+      color: #555;
+      background-color: #fafafa;
+    }
+    .highlight-row {
+      background-color: #fcfcfc;
+    }
+    .note {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 15px; }
+      th, td { padding: 8px 10px; font-size: 13px; }
+      .time-col { width: 110px; font-size: 12px; }
+      h1 { font-size: 20px; }
+    }
+  </style>
 </head>
 <body>
 
-<table>
+<div class="container">
+  <h1>Occupational Health Seminar Agenda</h1>
+  
+  <table>
     <thead>
-        <tr>
-            <th scope="col" style="width: 12%;">Time</th>
-            <th scope="col" style="width: 88%;">Agenda</th>
-        </tr>
+      <tr>
+        <th class="time-col">Time</th>
+        <th>Agenda</th>
+      </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>09:00–09:30 (30 min)</td>
-            <td>Registration</td>
-        </tr>
-        <tr>
-            <td>09:30–09:50 (20 min)</td>
-            <td>
-                Opening Remarks by Distinguished Guests<br>
-                Group Photo with Distinguished Guests
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" class="session-header">【Key Occupational Health Topics 1】 R103</td>
-        </tr>
-        <tr>
-            <td>09:50–10:30 (40 min)</td>
-            <td><b>
-                Topic 1: Recent legislative amendments regarding chemical substance management in Japan and associated exposure measurement methods. </b><br>
-              <b>  <a href="https://www.linkedin.com/in/haruo-hashimoto-0005a789/" target="_blank" rel="noopener noreferrer">Dr. Haruo Hashimoto</a> </b>
-            </td>
-        </tr>
-        <tr>
-            <td>10:30–10:50 (20 min)</td>
-            <td>Q &amp; A</td>
-        </tr>
-        <tr>
-            <td colspan="2" class="session-header">【Key Occupational Health Topics 2】 R103</td>
-        </tr>
-        <tr>
-            <td>10:50–11:30 (40 min)</td>
-            <td><b>
-                Topic 2: Recent Heat-Related Illness Prevention Measures in Japan </b><br>
-              <b>  <a href="https://cir.nii.ac.jp/crid/1420001326222742016?lang=en" target="_blank" rel="noopener noreferrer">Dr. Nagano Chikage</a></b>
-            </td>
-        </tr>
-        <tr>
-            <td>11:30–11:50 (20 min)</td>
-            <td>Q &amp; A</td>
-        </tr>
-        <tr>
-            <td>11:50–13:00 (70 min)</td>
-            <td>Lunch Break (Meal Provided)</td>
-        </tr>
-        <tr>
-            <td colspan="2" class="session-header">【Key Occupational Health Topics 3–5】</td>
-        </tr>
-        <tr>
-            <td>13:00–13:40 (40 min)</td>
-            <td>
-                <table style="width:100%; border:none; border-collapse:collapse;">
-                    <tr>
-                        <td style="border:none; width:33.33%;" class="track-cell">
-                            <div class="track-title">Topic 3: <span class="pending">Pending</span></div>
-                            <div class="track-detail">
-                                (<a href="#" target="_blank" rel="noopener noreferrer">Professor OOO </a>)<br>
-                                (R203)
-                            </div>
-                        </td>
-                        <td style="border:none; width:33.33%;" class="track-cell">
-                            <div class="track-title">Topic 4: <span class="pending">Pending</span></div>
-                            <div class="track-detail">
-                                (<a href="#" target="_blank" rel="noopener noreferrer">Professor OOO</a>)<br>
-                                (R101)
-                            </div>
-                        </td>
-                        <td style="border:none; width:33.33%;" class="track-cell">
-                            <div class="track-title">Topic 5: 從 SDS 危害資訊深化到 QRA 持續重評<br>林韋呈博士<br>(R103)</div>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td>13:40–14:00 (20 min)</td>
-            <td>Q &amp; A</td>
-        </tr>
-        <tr>
-            <td>14:00–14:40 (40 min)</td>
-            <td>Closing Remarks + Group Photo</td>
-        </tr>
-        <tr>
-            <td>14:40</td>
-            <td>Adjournment</td>
-        </tr>
+      <!-- Morning Session -->
+      <tr>
+        <td class="time-col">09:00–09:30 (30 min)</td>
+        <td class="topic-cell">Registration</td>
+      </tr>
+      <tr>
+        <td class="time-col">09:30–09:50 (20 min)</td>
+        <td class="topic-cell">Opening Remarks by Distinguished Guests<br>Group Photo with Distinguished Guests</td>
+      </tr>
+      
+      <!-- Key Topics 1 -->
+      <tr>
+        <td colspan="2" class="session-header">【Key Occupational Health Topics 1】 R103</td>
+      </tr>
+      <tr class="highlight-row">
+        <td class="time-col">09:50–10:30 (40 min)</td>
+        <td class="topic-cell">
+          Topic 1: Recent legislative amendments regarding chemical substance management in Japan and associated exposure measurement methods.<br>
+          <span class="speaker-name">Dr. Haruo Hashimoto</span>
+        </td>
+      </tr>
+      <tr>
+        <td class="time-col">10:30–10:50 (20 min)</td>
+        <td class="topic-cell">Q & A</td>
+      </tr>
+
+      <!-- Key Topics 2 -->
+      <tr>
+        <td colspan="2" class="session-header">【Key Occupational Health Topics 2】 R103</td>
+      </tr>
+      <tr class="highlight-row">
+        <td class="time-col">10:50–11:30 (40 min)</td>
+        <td class="topic-cell">
+          Topic 2: Recent Heat-Related Illness Prevention Measures in Japan<br>
+          <span class="speaker-name">Dr. Nagano Chikage</span>
+        </td>
+      </tr>
+      <tr>
+        <td class="time-col">11:30–11:50 (20 min)</td>
+        <td class="topic-cell">Q & A</td>
+      </tr>
+      <tr>
+        <td class="time-col">11:50–13:00 (70 min)</td>
+        <td class="topic-cell">Lunch Break (Meal Provided)</td>
+      </tr>
+
+      <!-- Afternoon Session (Modified) -->
+      <tr>
+        <td colspan="2" class="session-header">【Key Occupational Health Topics 3–5】 R103</td>
+      </tr>
+      <tr class="highlight-row">
+        <td class="time-col">13:00–13:40 (30 min + QA 10 min)</td>
+        <td class="topic-cell">
+          Topic 3: Occupational Health Issues of Delivery Platform Workers<br>
+          <span class="speaker-name">Prof. Hao-Jan Kuo</span>
+        </td>
+      </tr>
+      <tr class="highlight-row">
+        <td class="time-col">13:40–14:20 (30 min + QA 10 min)</td>
+        <td class="topic-cell">
+          Topic 4: Occupational Health Hazards of High Temperatures<br>
+          <span class="speaker-name">Prof. Yu-Che Chuang</span>
+        </td>
+      </tr>
+      <tr>
+        <td class="time-col">14:20–14:40 (20 min)</td>
+        <td class="topic-cell break-cell">Break</td>
+      </tr>
+      <tr class="highlight-row">
+        <td class="time-col">14:40–15:20 (30 min + QA 10 min)</td>
+        <td class="topic-cell">
+          Topic 5: New Trends in Major Chemical Risk Management: From SDS Hazard Information to Continuous QRA Re-evaluation<br>
+          <span class="speaker-name">Dr. Wei-Cheng Lin</span>
+        </td>
+      </tr>
+      
+      <!-- Afternoon Closing -->
+      <tr>
+        <td class="time-col">15:20–15:30 (10 min)</td>
+        <td class="topic-cell">Closing Remarks</td>
+      </tr>
+      <tr>
+        <td class="time-col">15:30</td>
+        <td class="topic-cell">Adjournment</td>
+      </tr>
     </tbody>
-</table>
+  </table>
+
+  <div class="note">
+    ※ All afternoon sessions will be held sequentially in Room R103. Please take note of the schedule.<br>
+    ※ The organizer reserves the right to adjust the agenda. Any changes will be announced separately.
+  </div>
+</div>
 
 </body>
 </html>
