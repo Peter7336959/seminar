@@ -231,201 +231,192 @@ ul.task-list li input[type="checkbox"] {
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>議程表</title>
+  <title>職業衛生研討會議程表</title>
   <style>
-    html, body {
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      width: 100%;
-      height: 100%;
-      font-family: "DFKai-SB", "BiauKai", "標楷體", "KaiTi", "楷体", serif;
-      background: #ffffff;
-      letter-spacing: -0.5px;
     }
     body {
-      display: flex;
-      justify-content: center;
-      align-items: stretch;
-      padding: 8px;
-      box-sizing: border-box;
+      font-family: "Microsoft JhengHei", "PingFang TC", "Noto Sans TC", sans-serif;
+      background: #f0f2f5;
+      color: #333;
+      padding: 30px 15px;
+      line-height: 1.6;
     }
-    .agenda-table {
-      border-collapse: collapse;
-      width: 100%;
-      height: 100%;
-      background: white;
-      border: 2px solid #333;
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 30px;
+      border-radius: 8px;
     }
-    .agenda-table th,
-    .agenda-table td {
-      border: 1px solid #555;
-      padding: 6px 8px;
-      vertical-align: middle;
+    h1 {
       text-align: center;
-      font-size: 1.05rem;
-      color: #1e2b3a;
-      line-height: 1.25;
-      letter-spacing: -0.5px;
-      font-family: inherit;
+      font-size: 24px;
+      color: #1a3a5c;
+      margin-bottom: 25px;
+      letter-spacing: 2px;
     }
-    .agenda-table th {
-      background: #d9d9d9;
-      font-weight: 700;
-      font-size: 1.15rem;
-      padding: 10px 6px;
-      line-height: 1.2;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+      border: 2px solid #aaa;
     }
-    /* ===== 時間欄縮到最小 ===== */
-    .agenda-table thead th:first-child {
-      width: 1px;
-      white-space: nowrap;
-      padding: 10px 4px;
+    th, td {
+      border: 1px solid #aaa;
+      padding: 12px 15px;
+      vertical-align: middle;
+    }
+    thead th {
+      background-color: #e0e0e0;
+      color: #000;
+      font-weight: bold;
+      text-align: center;
+      font-size: 16px;
+      padding: 14px;
     }
     .time-col {
-      width: 1px;
+      width: 180px;
+      text-align: center;
+      font-weight: normal;
       white-space: nowrap;
+    }
+    .session-header {
+      background-color: #e0e0e0;
+      font-weight: bold;
       text-align: center;
-      background: #fff;
-      font-weight: 700;
-      line-height: 1.25;
-      padding: 6px 4px;
-      font-size: 1rem;
+      font-size: 16px;
+      letter-spacing: 1px;
     }
-        .time-col1 {
-      width: 1px;
-      white-space: nowrap;
+    .topic-cell {
       text-align: center;
-      background: #fff;
-      font-weight: normal;
-      line-height: 1.25;
-      padding: 6px 4px;
-      font-size: 1rem;
+      line-height: 1.8;
     }
-    /* ========================== */
-
-    /* 分段標題列（淺灰） */
-    .section-header td {
-      background: #d9d9d9;
-      font-weight: normal;
-      font-size: 1.1rem;
-      line-height: 1.2;
+    .speaker-name {
+      color: #0044cc;
+      font-weight: bold;
     }
-
-    /* 平行會議：三個議題欄平均分配剩餘寬度 */
-    .parallel-topic {
+    .break-cell {
       text-align: center;
-      vertical-align: middle;
-      padding: 10px 8px;
-      line-height: 1.3;
-      font-size: 1rem;
+      font-weight: bold;
+      color: #555;
+      background-color: #fafafa;
     }
-    .parallel-topic .topic {
-      font-weight: 700;
-      display: block;
+    .highlight-row {
+      background-color: #fcfcfc;
     }
-    .parallel-topic .room {
-      font-weight: normal;
-      display: block;
-      margin-top: 2px;
+    .note {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #666;
+      text-align: center;
     }
-    /* 超連結樣式 */
-    a {
-      color: #1a0dab;
-      text-decoration: none;
+    @media (max-width: 600px) {
+      .container { padding: 15px; }
+      th, td { padding: 8px 10px; font-size: 13px; }
+      .time-col { width: 110px; font-size: 12px; }
+      h1 { font-size: 20px; }
     }
-    a:hover {
-      text-decoration: underline;
-    }
-    /* ===== 待定：紅字粗體 ===== */
-    .tbd {
-      color: #cc0000;
-      font-weight: 700;
-    }
-    /* ========================== */
   </style>
 
 
+
+<div class="container">
+  <h1>職業衛生研討會議程表</h1>
   
-<table class="agenda-table caption-top table">
+  
+<table class="caption-top table">
 <colgroup>
-<col>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
-<th data-quarto-table-cell-role="th">時間</th>
-<th colspan="3" data-quarto-table-cell-role="th">議程</th>
+<th class="time-col" data-quarto-table-cell-role="th">時間</th>
+<th data-quarto-table-cell-role="th">議程</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td class="time-col1">0900-0930（30分鐘）</td>
-<td colspan="3">報到</td>
+<td class="time-col">0900-0930 (30分鐘)</td>
+<td class="topic-cell">報到</td>
 </tr>
 <tr class="even">
-<td rowspan="2" class="time-col1">0930-0950（20分鐘）</td>
-<td colspan="3">貴賓致詞</td>
+<td class="time-col">0930-0950 (20分鐘)</td>
+<td class="topic-cell">貴賓致詞<br>
+出席貴賓合影</td>
 </tr>
 <tr class="odd">
-<td colspan="3">出席貴賓合影</td>
+<td colspan="2" class="session-header">【重要職業衛生議題分享1】 R103</td>
 </tr>
-<tr class="section-header even">
-<td colspan="4">【重要職業衛生議題分享1】 R103</td>
-</tr>
-<tr class="odd">
-<td class="time-col1">0950-1030（40分鐘）</td>
-<td colspan="3"><strong>議題一　近期日本化學物質管理法規修正與暴露評估方法<br>
-<a href="https://www.linkedin.com/in/haruo-hashimoto-0005a789/" target="_blank" rel="noopener noreferrer">Dr. Haruo Hashimoto</a></strong></td>
-</tr>
-<tr class="even">
-<td class="time-col1">1030-1050（20分鐘）</td>
-<td colspan="3">Q &amp; A</td>
-</tr>
-<tr class="section-header odd">
-<td colspan="4">【重要職業衛生議題分享2】 R103</td>
-</tr>
-<tr class="even">
-<td class="time-col1">1050-1130（40分鐘）</td>
-<td colspan="3"><strong>議題二　近期日本熱引起相關疾病預防方法<br>
-<a href="https://cir.nii.ac.jp/crid/1420001326222742016?lang=en" target="_blank" rel="noopener noreferrer">Dr. Nagano Chikage</a></strong></td>
+<tr class="highlight-row even">
+<td class="time-col">0950-1030 (40分鐘)</td>
+<td class="topic-cell">議題一　近期日本化學物質管理法規修正與暴露評估方法<br>
+<span class="speaker-name">Dr. Haruo Hashimoto</span></td>
 </tr>
 <tr class="odd">
-<td class="time-col1">1130-1150（20分鐘）</td>
-<td colspan="3">Q &amp; A</td>
+<td class="time-col">1030-1050 (20分鐘)</td>
+<td class="topic-cell">Q &amp; A</td>
 </tr>
 <tr class="even">
-<td class="time-col1">1150-1300（70分鐘）</td>
-<td colspan="3">午休（含用餐）</td>
+<td colspan="2" class="session-header">【重要職業衛生議題分享2】 R103</td>
 </tr>
-<tr class="section-header odd">
-<td colspan="4">【重要職業衛生議題分享3~5】</td>
+<tr class="highlight-row odd">
+<td class="time-col">1050-1130 (40分鐘)</td>
+<td class="topic-cell">議題二　近期日本熱引起相關疾病預防方法<br>
+<span class="speaker-name">Dr. Nagano Chikage</span></td>
 </tr>
 <tr class="even">
-<td class="time-col1">1300-1340（40分鐘）</td>
-<td class="parallel-topic"><span class="topic">議題三　<span class="tbd">待定</span></span> ( <a href="#">OOO 教授</a>)<br>
-<span class="room">(R203)</span></td>
-<td class="parallel-topic"><span class="topic">議題四　<span class="tbd">待定</span></span> (<a href="#">OOO 教授</a>)<br>
-<span class="room">(R101)</span></td>
-<td class="parallel-topic"><span class="topic">
-<strong>議題五　重大化學風險管理的新趨勢：從 SDS 危害資訊深化到 QRA 持續重評</strong></span><strong> 林韋呈博士</strong><br>
-<span class="room">(R103)</span></td>
+<td class="time-col">1130-1150 (20分鐘)</td>
+<td class="topic-cell">Q &amp; A</td>
 </tr>
 <tr class="odd">
-<td class="time-col1">1340-1400（20分鐘）</td>
-<td colspan="3">Q &amp; A</td>
+<td class="time-col">1150-1300 (70分鐘)</td>
+<td class="topic-cell">午休 (含用餐)</td>
 </tr>
 <tr class="even">
-<td class="time-col1">1400-1440（40分鐘）</td>
-<td colspan="3">閉幕致詞+合影</td>
+<td colspan="2" class="session-header">【重要職業衛生議題分享3~5】 R103</td>
+</tr>
+<tr class="highlight-row odd">
+<td class="time-col">1300-1340 (30分鐘+10分鐘QA)</td>
+<td class="topic-cell">議題三　外送平台勞動健康議題<br>
+<span class="speaker-name">郭浩然 教授</span></td>
+</tr>
+<tr class="highlight-row even">
+<td class="time-col">1340-1420 (30分鐘+10分鐘QA)</td>
+<td class="topic-cell">議題四　高氣溫職業衛生危害議題<br>
+<span class="speaker-name">莊侑哲 教授</span></td>
 </tr>
 <tr class="odd">
-<td class="time-col1">1440</td>
-<td colspan="3">賦歸</td>
+<td class="time-col">1420-1440 (20分鐘)</td>
+<td class="topic-cell break-cell">休息</td>
+</tr>
+<tr class="highlight-row even">
+<td class="time-col">1440-1520 (30分鐘+10分鐘QA)</td>
+<td class="topic-cell">議題五　重大化學風險管理的新趨勢：從 SDS 危害資訊深化到 QRA 持續重評<br>
+<span class="speaker-name">林韋呈 博士</span></td>
+</tr>
+<tr class="odd">
+<td class="time-col">1520-1530 (10分鐘)</td>
+<td class="topic-cell">閉幕致詞</td>
+</tr>
+<tr class="even">
+<td class="time-col">1530</td>
+<td class="topic-cell">賦歸</td>
 </tr>
 </tbody>
 </table>
+
+
+  <div class="note">
+    ※ 下午場次統一於 R103 教室依序進行，請與會者留意時間安排。<br>
+    ※ 主辦單位保留議程調整之權利，如有變動將另行公告。
+  </div>
+</div>
 
 
 
