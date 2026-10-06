@@ -163,99 +163,99 @@ This symposium invites experts from industry, government, academia, and research
   <h1>Occupational Health Seminar Agenda</h1>
   
   <table>
-  <thead>
-    <tr>
-      <th class="time-col">Time</th>
-      <th>Agenda</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- Morning Session -->
-    <tr>
-      <td class="time-col">09:00–09:30 (30 min)</td>
-      <td class="topic-cell">Registration</td>
-    </tr>
-    <tr>
-      <td class="time-col">09:30–09:50 (20 min)</td>
-      <td class="topic-cell">Opening Remarks by Distinguished Guests<br>Group Photo with Distinguished Guests</td>
-    </tr>
-    
-    <!-- Key Topics 1 -->
-    <tr>
-      <td colspan="2" class="session-header">【Key Occupational Health Topics 1】 R103</td>
-    </tr>
-    <tr class="highlight-row">
-      <td class="time-col">09:50–10:30 (40 min)</td>
-      <td class="topic-cell">
-        Topic 1: Recent legislative amendments regarding chemical substance management in Japan and associated exposure measurement methods.<br>
-        <span class="speaker-name">Dr. Haruo Hashimoto</span>
-      </td>
-    </tr>
-    <tr>
-      <td class="time-col">10:30–10:50 (20 min)</td>
-      <td class="topic-cell">Q & A</td>
-    </tr>
+<thead>
+  <tr>
+    <th class="time-col">Time</th>
+    <th>Agenda</th>
+  </tr>
+</thead>
+<tbody>
+  <!-- Morning Session -->
+  <tr>
+    <td class="time-col">09:00–09:30 (30 min)</td>
+    <td class="topic-cell">Registration</td>
+  </tr>
+  <tr>
+    <td class="time-col">09:30–09:50 (20 min)</td>
+    <td class="topic-cell">Opening Remarks by Distinguished Guests<br>Group Photo with Distinguished Guests</td>
+  </tr>
+  
+  <!-- Key Topics 1 -->
+  <tr>
+    <td colspan="2" class="session-header">【Key Occupational Health Topics 1】 R103</td>
+  </tr>
+  <tr class="highlight-row">
+    <td class="time-col">09:50–10:30 (40 min)</td>
+    <td class="topic-cell">
+      Topic 1: Recent legislative amendments regarding chemical substance management in Japan and associated exposure measurement methods.<br>
+      <span class="speaker-name">Dr. Haruo Hashimoto</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="time-col">10:30–10:50 (20 min)</td>
+    <td class="topic-cell">Q & A</td>
+  </tr>
 
-    <!-- Key Topics 2 -->
-    <tr>
-      <td colspan="2" class="session-header">【Key Occupational Health Topics 2】 R103</td>
-    </tr>
-    <tr class="highlight-row">
-      <td class="time-col">10:50–11:30 (40 min)</td>
-      <td class="topic-cell">
-        Topic 2: Recent Heat-Related Illness Prevention Measures in Japan<br>
-        <span class="speaker-name">Dr. Nagano Chikage</span>
-      </td>
-    </tr>
-    <tr>
-      <td class="time-col">11:30–11:50 (20 min)</td>
-      <td class="topic-cell">Q & A</td>
-    </tr>
-    <tr>
-      <td class="time-col">11:50–13:00 (70 min)</td>
-      <td class="topic-cell">Lunch Break (Meal Provided)</td>
-    </tr>
+  <!-- Key Topics 2 -->
+  <tr>
+    <td colspan="2" class="session-header">【Key Occupational Health Topics 2】 R103</td>
+  </tr>
+  <tr class="highlight-row">
+    <td class="time-col">10:50–11:30 (40 min)</td>
+    <td class="topic-cell">
+      Topic 2: Recent Heat-Related Illness Prevention Measures in Japan<br>
+      <span class="speaker-name">Dr. Nagano Chikage</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="time-col">11:30–11:50 (20 min)</td>
+    <td class="topic-cell">Q & A</td>
+  </tr>
+  <tr>
+    <td class="time-col">11:50–13:00 (70 min)</td>
+    <td class="topic-cell">Lunch Break (Meal Provided)</td>
+  </tr>
 
-    <!-- Afternoon Session (Modified) -->
-    <tr>
-      <td colspan="2" class="session-header">【Key Occupational Health Topics 3–5】 R103</td>
-    </tr>
-    <tr class="highlight-row">
-      <td class="time-col">13:00–13:40 (30 min + QA 10 min)</td>
-      <td class="topic-cell">
-        Topic 3: Occupational Health Issues of Delivery Platform Workers<br>
-        <span class="speaker-name">Prof. Hao-Jan Kuo</span>
-      </td>
-    </tr>
-    <tr class="highlight-row">
-      <td class="time-col">13:40–14:20 (30 min + QA 10 min)</td>
-      <td class="topic-cell">
-        Topic 4: Occupational Health Hazards of High Temperatures<br>
-        <span class="speaker-name">Prof. Yu-Che Chuang</span>
-      </td>
-    </tr>
-    <tr>
-      <td class="time-col">14:20–14:40 (20 min)</td>
-      <td class="topic-cell break-cell">Break</td>
-    </tr>
-    <tr class="highlight-row">
-      <td class="time-col">14:40–15:20 (30 min + QA 10 min)</td>
-      <td class="topic-cell">
-        Topic 5: New Trends in Major Chemical Risk Management: From SDS Hazard Information to Continuous QRA Re-evaluation<br>
-        <span class="speaker-name">Dr. Wei-Cheng Lin</span>
-      </td>
-    </tr>
-    
-    <!-- Afternoon Closing -->
-    <tr>
-      <td class="time-col">15:20–15:30 (10 min)</td>
-      <td class="topic-cell">Closing Remarks</td>
-    </tr>
-    <tr>
-      <td class="time-col">15:30</td>
-      <td class="topic-cell">Adjournment</td>
-    </tr>
-  </tbody>
+  <!-- Afternoon Session (Modified) -->
+  <tr>
+    <td colspan="2" class="session-header">【Key Occupational Health Topics 3–5】 R103</td>
+  </tr>
+  <tr class="highlight-row">
+    <td class="time-col">13:00–13:40 (30 min + QA 10 min)</td>
+    <td class="topic-cell">
+      Topic 3: Occupational Health Issues of Delivery Platform Workers<br>
+      <span class="speaker-name">Prof. How-Ran Guo</span>
+    </td>
+  </tr>
+  <tr class="highlight-row">
+    <td class="time-col">13:40–14:20 (30 min + QA 10 min)</td>
+    <td class="topic-cell">
+      Topic 4: Occupational Health Hazards of High Temperatures<br>
+      <span class="speaker-name">Prof. Yow-Jer Juang</span>
+    </td>
+  </tr>
+  <tr>
+    <td class="time-col">14:20–14:40 (20 min)</td>
+    <td class="topic-cell break-cell">Break</td>
+  </tr>
+  <tr class="highlight-row">
+    <td class="time-col">14:40–15:20 (30 min + QA 10 min)</td>
+    <td class="topic-cell">
+      Topic 5: New Trends in Major Chemical Risk Management: From SDS Hazard Information to Continuous QRA Re-evaluation<br>
+      <span class="speaker-name">Dr. Wei-Cheng Lin</span>
+    </td>
+  </tr>
+  
+  <!-- Afternoon Closing -->
+  <tr>
+    <td class="time-col">15:20–15:30 (10 min)</td>
+    <td class="topic-cell">Closing Remarks</td>
+  </tr>
+  <tr>
+    <td class="time-col">15:30</td>
+    <td class="topic-cell">Adjournment</td>
+  </tr>
+</tbody>
 </table>
 
   <div class="note">
