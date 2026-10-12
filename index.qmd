@@ -1,12 +1,12 @@
 ---
 title: "115年國際職業衛生趨勢研討會"
 subtitle: "活動簡介"
-date: "2026-10-09"
+date: "2026-10-20"
 date-format: long
 ---
 
 ::: {.callout-warning appearance="simple"}
-**本網頁排版測試中\~\~\~，內容以正式公告為準。**
+**本網頁排版測試中\~\~\~，內容以正式公告為準。 預計公告與報名日期：115-10-20**
 :::
 
 **指導單位：勞動部勞動及職業安全衛生研究所**
@@ -181,95 +181,95 @@ date-format: long
   <table>
 <thead>
 <tr>
-  <th class="time-col">時間</th>
-  <th>議程</th>
+<th class="time-col">時間</th>
+<th>議程</th>
 </tr>
 </thead>
 <tbody>
 <!-- 上午場 -->
 <tr>
-  <td class="time-col">0900-0930 (30分鐘)</td>
-  <td class="topic-cell">報到</td>
+<td class="time-col">0900-0930 (30分鐘)</td>
+<td class="topic-cell">報到</td>
 </tr>
 <tr>
-  <td class="time-col">0930-0950 (20分鐘)</td>
-  <td class="topic-cell">貴賓致詞<br>出席貴賓合影</td>
+<td class="time-col">0930-0950 (20分鐘)</td>
+<td class="topic-cell">貴賓致詞<br>出席貴賓合影</td>
 </tr>
 
 <!-- 議題分享1 -->
 <tr>
-  <td colspan="2" class="session-header">【重要職業衛生議題分享1】 R103</td>
+<td colspan="2" class="session-header">【重要職業衛生議題分享1】 R103</td>
 </tr>
 <tr class="highlight-row">
-  <td class="time-col">0950-1030 (40分鐘)</td>
-  <td class="topic-cell">議題一　<a href="專題報告摘要_日本學者1.pdf" target="_blank" >
-    近期日本化學物質管理法規修正與暴露評估方法<br>
-    <span class="speaker-name"><a href="https://www.linkedin.com/in/haruo-hashimoto-0005a789/" target="_blank" >Dr. Haruo Hashimoto</span>
-  </td>
+<td class="time-col">0950-1030 (40分鐘)</td>
+<td class="topic-cell">議題一　<a href="專題報告摘要_日本學者1.pdf" target="_blank" >
+  近期日本化學物質管理法規修正與暴露評估方法<br>
+  <span class="speaker-name"><a href="https://www.linkedin.com/in/haruo-hashimoto-0005a789/" target="_blank" >Dr. Haruo Hashimoto</span>
+</td>
 </tr>
 <tr>
-  <td class="time-col">1030-1050 (20分鐘)</td>
-  <td class="topic-cell">Q & A</td>
+<td class="time-col">1030-1050 (20分鐘)</td>
+<td class="topic-cell">Q & A</td>
 </tr>
 
 <!-- 議題分享2 -->
 <tr>
-  <td colspan="2" class="session-header">【重要職業衛生議題分享2】 R103</td>
+<td colspan="2" class="session-header">【重要職業衛生議題分享2】 R103</td>
 </tr>
 <tr class="highlight-row">
-  <td class="time-col">1050-1130 (40分鐘)</td>
-  <td class="topic-cell">
-    議題二　近期日本熱危害引起相關疾病預防方法<br>
-    <span class="speaker-name"><a href="https://cir.nii.ac.jp/crid/1420001326222742016?lang=en" target="_blank" rel="noopener noreferrer">Dr. Nagano Chikage</span>
-  </td>
+<td class="time-col">1050-1130 (40分鐘)</td>
+<td class="topic-cell">
+  議題二　近期日本熱危害引起相關疾病預防方法<br>
+  <span class="speaker-name"><a href="https://cir.nii.ac.jp/crid/1420001326222742016?lang=en" target="_blank" rel="noopener noreferrer">Dr. Nagano Chikage</span>
+</td>
 </tr>
 <tr>
-  <td class="time-col">1130-1150 (20分鐘)</td>
-  <td class="topic-cell">Q & A</td>
+<td class="time-col">1130-1150 (20分鐘)</td>
+<td class="topic-cell">Q & A</td>
 </tr>
 <tr>
-  <td class="time-col">1150-1300 (70分鐘)</td>
-  <td class="topic-cell">午休 (含用餐)</td>
+<td class="time-col">1150-1300 (70分鐘)</td>
+<td class="topic-cell">午休 (含用餐)</td>
 </tr>
 
 <!-- 下午場 (修改後) -->
 <tr>
-  <td colspan="2" class="session-header">【重要職業衛生議題分享3~5】 R103</td>
+<td colspan="2" class="session-header">【重要職業衛生議題分享3~5】 R103</td>
 </tr>
 <tr class="highlight-row">
-  <td class="time-col">1300-1340 (30分鐘+10分鐘QA)</td>
-  <td class="topic-cell">
-    議題三　外送平台勞動健康議題<br>
-    <span class="speaker-name">郭浩然 教授</span>
-  </td>
+<td class="time-col">1300-1340 (30分鐘+10分鐘QA)</td>
+<td class="topic-cell">
+  議題三　外送平台勞動健康議題<br>
+  <span class="speaker-name">郭浩然 教授</span>
+</td>
 </tr>
 <tr class="highlight-row">
-  <td class="time-col">1340-1420 (30分鐘+10分鐘QA)</td>
-  <td class="topic-cell">
-    議題四　高氣溫職業衛生危害議題<br>
-    <span class="speaker-name">莊侑哲 教授</span>
-  </td>
+<td class="time-col">1340-1420 (30分鐘+10分鐘QA)</td>
+<td class="topic-cell">
+  議題四　高氣溫職業衛生危害議題<br>
+  <span class="speaker-name">莊侑哲 教授</span>
+</td>
 </tr>
 <tr>
-  <td class="time-col">1420-1440 (20分鐘)</td>
-  <td class="topic-cell break-cell">休息</td>
+<td class="time-col">1420-1440 (20分鐘)</td>
+<td class="topic-cell break-cell">休息</td>
 </tr>
 <tr class="highlight-row">
-  <td class="time-col">1440-1520 (30分鐘+10分鐘QA)</td>
-  <td class="topic-cell">
-    議題五　重大化學風險管理的新趨勢：從 SDS 危害資訊深化到 QRA 持續重評<br>
-    <span class="speaker-name">林韋呈 博士</span>
-  </td>
+<td class="time-col">1440-1520 (30分鐘+10分鐘QA)</td>
+<td class="topic-cell">
+  議題五　重大化學風險管理的新趨勢：從 SDS 危害資訊深化到 QRA 持續重評<br>
+  <span class="speaker-name">林韋呈 博士</span>
+</td>
 </tr>
 
 <!-- 下午場後續 -->
 <tr>
-  <td class="time-col">1520-1530 (10分鐘)</td>
-  <td class="topic-cell">閉幕致詞</td>
+<td class="time-col">1520-1530 (10分鐘)</td>
+<td class="topic-cell">閉幕致詞</td>
 </tr>
 <tr>
-  <td class="time-col">1530</td>
-  <td class="topic-cell">賦歸</td>
+<td class="time-col">1530</td>
+<td class="topic-cell">賦歸</td>
 </tr>
 </tbody>
 </table>
