@@ -246,7 +246,7 @@ date-format: long
 <tr class="highlight-row">
 <td class="time-col">1340-1420 (30分鐘+10分鐘QA)</td>
 <td class="topic-cell">
-議題四　高氣溫職業衛生危害議題<br>
+議題四　我國戶外高氣溫作業熱危害預防實地研究<br>
 <span class="speaker-name">莊侑哲 教授</span>
 </td>
 </tr>
