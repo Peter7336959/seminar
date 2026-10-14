@@ -187,8 +187,8 @@ This symposium invites experts from industry, government, academia, and research
 <tr class="highlight-row">
 <td class="time-col">09:50–10:30 (40 min)</td>
 <td class="topic-cell">
-  Topic 1: Recent legislative amendments regarding chemical substance management in Japan and associated exposure measurement methods.<br>
-  <span class="speaker-name">Prof. Haruo Hashimoto</span>
+Topic 1: Recent legislative amendments regarding chemical substance management in Japan and associated exposure measurement methods.<br>
+<span class="speaker-name">Prof. Haruo Hashimoto</span>
 </td>
 </tr>
 <tr>
@@ -203,8 +203,8 @@ This symposium invites experts from industry, government, academia, and research
 <tr class="highlight-row">
 <td class="time-col">10:50–11:30 (40 min)</td>
 <td class="topic-cell">
-  Topic 2: Recent Heat-Related Illness Prevention Measures in Japan<br>
-  <span class="speaker-name">Dr. Chikage Nagano</span>
+Topic 2: Recent Heat-Related Illness Prevention Measures in Japan<br>
+<span class="speaker-name">Dr. Chikage Nagano</span>
 </td>
 </tr>
 <tr>
@@ -223,15 +223,15 @@ This symposium invites experts from industry, government, academia, and research
 <tr class="highlight-row">
 <td class="time-col">13:00–13:40 (30 min + QA 10 min)</td>
 <td class="topic-cell">
-  Topic 3: Occupational Health Issues of Delivery Platform Workers<br>
-  <span class="speaker-name">Prof. How-Ran Guo</span>
+Topic 3: Occupational Health Issues of Delivery Platform Workers<br>
+<span class="speaker-name">Prof. How-Ran Guo</span>
 </td>
 </tr>
 <tr class="highlight-row">
 <td class="time-col">13:40–14:20 (30 min + QA 10 min)</td>
 <td class="topic-cell">
-  Topic 4: Field Study on Heat Hazard Prevention in Outdoor High-Temperature Operations in Taiwan<br>
-  <span class="speaker-name">Prof. Yow-Jer Juang</span>
+Topic 4: Field Study on Heat Hazard Prevention in Outdoor High-Temperature Operations in Taiwan<br>
+<span class="speaker-name">Prof. Yow-Jer Juang</span>
 </td>
 </tr>
 <tr>
@@ -241,8 +241,8 @@ This symposium invites experts from industry, government, academia, and research
 <tr class="highlight-row">
 <td class="time-col">14:40–15:20 (30 min + QA 10 min)</td>
 <td class="topic-cell">
-  Topic 5: New Trends in Major Chemical Risk Management: From SDS Hazard Information to Continuous QRA Re-evaluation<br>
-  <span class="speaker-name">Dr. Wei-Cheng Lin</span>
+Topic 5: New Trends in Major Chemical Risk Management: From SDS Hazard Information to Continuous QRA Re-evaluation<br>
+<span class="speaker-name">Dr. Wei-Cheng Lin</span>
 </td>
 </tr>
 
@@ -299,6 +299,6 @@ This symposium invites experts from industry, government, academia, and research
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57846.05293850923!2d121.50850845855001!3d25.02123249153242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9887ff09895%3A0xcf121b78ea5b7bfd!2z56aP6I-v5ZyL6Zqb5paH5pWZ5pyD6aSo!5e0!3m2!1szh-TW!2stw!4v1789688606902!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 ```
 
-## **6. Seminar Handbook Download ([Chinese version](會議手冊草稿(廠商參考用).pdf))**
+## **6. Seminar Handbook Download ([Chinese version](會議手冊草稿.pdf))**
 
 ### (含議題內容摘要)
