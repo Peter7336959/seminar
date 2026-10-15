@@ -1,5 +1,5 @@
 ---
-title: "2026 International Occupational Health Trends Symposium"
+title: "2026 The Seminar of International Occupational Health research Trends"
 subtitle: " Event Introduction and Registration Information"
 date: "2026-10-20"
 date-format: long
