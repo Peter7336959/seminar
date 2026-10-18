@@ -1,5 +1,5 @@
 ---
-title: "115年國際職業衛生趨勢研討會"
+title: "國際職業衛生研究趨勢研討會"
 subtitle: "活動簡介"
 date: "2026-10-20"
 date-format: long
@@ -81,7 +81,7 @@ date-format: long
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>職業衛生研討會議程表</title>
+  <title>國際職業衛生研究趨勢研討會議程表</title>
   <style>
     * {
       box-sizing: border-box;
@@ -176,7 +176,7 @@ date-format: long
 <body>
 
 <div class="container">
-  <h1>職業衛生研討會議程表</h1>
+  <h1>國際職業衛生研究趨勢研討會議程表</h1>
   
   <table>
 <thead>
@@ -239,7 +239,7 @@ date-format: long
 <tr class="highlight-row">
 <td class="time-col">1300-1340 (30分鐘+10分鐘QA)</td>
 <td class="topic-cell">
-議題三　外送平台勞動健康議題<br>
+議題三　<a href="郭浩然老師＿研討會摘要.pdf" target="_blank" >新興零工經濟引發之職業衛生危害：數位平台工作者的負面健康效應議題<br>
 <span class="speaker-name">郭浩然 教授</span>
 </td>
 </tr>

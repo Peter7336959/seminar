@@ -1,5 +1,5 @@
 ---
-title: "2026 The Seminar of International Occupational Health research Trends"
+title: "The Seminar of International Occupational Health research Trends"
 subtitle: " Event Introduction and Registration Information"
 date: "2026-10-20"
 date-format: long
@@ -65,7 +65,7 @@ This symposium invites experts from industry, government, academia, and research
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Occupational Health Seminar Agenda</title>
+  <title>The Seminar of International Occupational Health research Trends Agenda</title>
   <style>
     * {
       box-sizing: border-box;
@@ -160,7 +160,7 @@ This symposium invites experts from industry, government, academia, and research
 <body>
 
 <div class="container">
-  <h1>Occupational Health Seminar Agenda</h1>
+  <h1>The Seminar of International Occupational Health research Trends Agenda</h1>
   
   <table>
 <thead>
