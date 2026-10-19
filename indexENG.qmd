@@ -5,10 +5,6 @@ date: "2026-10-20"
 date-format: long
 ---
 
-::: {.callout-warning appearance="simple"}
-This webpage is currently undergoing layout testing; the content is subject to the official announcement.
-:::
-
 **Supervising Agency**: Institute of Labor, Occupational Safety and Health ([ILOSH](https://www.ilosh.gov.tw/)), Ministry of Labor
 
 **Organizer**: Chinese Occupational Safety and Health Management Association ([CHSM.org](https://www.cshm.org.tw/))

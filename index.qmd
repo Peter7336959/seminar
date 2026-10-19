@@ -6,7 +6,7 @@ date-format: long
 ---
 
 ::: {.callout-warning appearance="simple"}
-**本網頁排版測試中\~\~\~，內容以正式公告為準。 預計公告與報名日期：115-10-20**
+**研討會報名開始日期：115-10-20， 舉辦日期：115-11-10**
 :::
 
 **指導單位：勞動部勞動及職業安全衛生研究所**
@@ -70,7 +70,7 @@ date-format: long
 
 5.  費用及報名方式：免費，**採線上報名後電子郵件通知**。
 
-6.  線上報名連結：[google 報名表單](https://docs.google.com/forms/d/e/1FAIpQLSdVc3K6VCUo2zdH1Dqsxn3VdvGn-kUcxiqp3BzKNRcJMXxtGQ/viewform) (報名成功以電子郵件通知並公告)
+6.  線上報名連結：[google 報名表單](https://docs.google.com/forms/d/e/1FAIpQLSdVc3K6VCUo2zdH1Dqsxn3VdvGn-kUcxiqp3BzKNRcJMXxtGQ/viewform) (報名完成一週後，將公告參與名單於此並寄送電子郵件通知)
 :::
 
 ## **三、議程**
@@ -246,7 +246,7 @@ date-format: long
 <tr class="highlight-row">
 <td class="time-col">1340-1420 (30分鐘+10分鐘QA)</td>
 <td class="topic-cell">
-議題四　我國戶外高氣溫作業熱危害預防實地研究<br>
+議題四　<a href="莊侑哲老師_研討會摘要.pdf" target="_blank" >我國戶外高氣溫作業熱危害預防實地研究<br>
 <span class="speaker-name">莊侑哲 教授</span>
 </td>
 </tr>
