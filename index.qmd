@@ -6,7 +6,9 @@ date-format: long
 ---
 
 ::: {.callout-warning appearance="simple"}
-**研討會報名開始日期：115-10-20， 舉辦日期：115-11-10**
+- **研討會報名開始日期：115-10-20， 舉辦日期：115-11-10**
+
+- **新增** 議題一 簡報pdf檔 (prepared by: [Prof. Haruo Hashimoto](https://www.linkedin.com/in/haruo-hashimoto-0005a789/))
 :::
 
 **指導單位：勞動部勞動及職業安全衛生研究所**
@@ -203,7 +205,7 @@ date-format: long
 <tr class="highlight-row">
 <td class="time-col">0950-1030 (40分鐘)</td>
 <td class="topic-cell">議題一　<a href="專題報告摘要_日本學者1.pdf" target="_blank" >
-近期日本化學物質管理法規修正與暴露評估方法<br>
+近期日本化學物質管理法規修正與暴露評估方法  　<a href="Keynote_Hashimoto.pdf" target="_blank" >(簡報)<br>
 <span class="speaker-name"><a href="https://www.linkedin.com/in/haruo-hashimoto-0005a789/" target="_blank" >Prof. Haruo Hashimoto</span>
 </td>
 </tr>
@@ -315,4 +317,4 @@ date-format: long
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57846.05293850923!2d121.50850845855001!3d25.02123249153242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9887ff09895%3A0xcf121b78ea5b7bfd!2z56aP6I-v5ZyL6Zqb5paH5pWZ5pyD6aSo!5e0!3m2!1szh-TW!2stw!4v1789688606902!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 ```
 
-## **六、研討會手冊[下載](會議手冊.pdf)** 
+## **六、研討會手冊[下載](會議手冊.pdf)**
