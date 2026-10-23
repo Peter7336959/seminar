@@ -5,10 +5,12 @@ date: "2026-10-20"
 date-format: long
 ---
 
-::: {.callout-warning appearance="simple"}
-- **研討會報名開始日期：115-10-20， 舉辦日期：115-11-10**
+::: {.callout-important appearance="simple"}
+- **新增** 議題四 簡報pdf檔 (prepared by: 莊侑哲 教授) **115-10-23**
 
 - **新增** 議題一 簡報pdf檔 (prepared by: Prof. Haruo Hashimoto) **115-10-22**
+
+- **研討會報名開始日期：115-10-20， 舉辦日期：115-11-10**
 :::
 
 **指導單位：勞動部勞動及職業安全衛生研究所**
@@ -248,7 +250,7 @@ date-format: long
 <tr class="highlight-row">
 <td class="time-col">1340-1420 (30分鐘+10分鐘QA)</td>
 <td class="topic-cell">
-議題四　<a href="莊侑哲老師_研討會摘要.pdf" target="_blank" >我國戶外高氣溫作業熱危害預防實地研究<br>
+議題四　<a href="莊侑哲老師_研討會摘要.pdf" target="_blank" >我國戶外高氣溫作業熱危害預防實地研究 <a href="我國戶外高氣溫作業熱危害預防-莊侑哲.pdf" target="_blank" >(簡報)<br>
 <span class="speaker-name">莊侑哲 教授</span>
 </td>
 </tr>
