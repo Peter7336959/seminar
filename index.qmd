@@ -5,15 +5,11 @@ date: "2026-10-26"
 date-format: long
 ---
 
-::: {.callout-note appearance="simple"}
-- **新增** 議題二 簡報pdf檔 (prepared by: Dr. Chikage Nagano) **115-10-25**
-
-<!-- -->
-
-- **新增** 議題四 簡報pdf檔 (prepared by: 莊侑哲 教授) **115-10-23**
-
-- **新增** 議題一 簡報pdf檔 (prepared by: Prof. Haruo Hashimoto) **115-10-22**
-
+::: {.callout-tip appearance="simple"}
+- **新增** 議題五 摘要pdf檔 ( 林韋呈 博士 ) **115-10-27**
+- **新增** 議題二 簡報pdf檔 ( Dr. Chikage Nagano ) **115-10-25**
+- **新增** 議題四 簡報pdf檔 ( 莊侑哲 教授 ) **115-10-23**
+- **新增** 議題一 簡報pdf檔 ( Prof. Haruo Hashimoto ) **115-10-22**
 - **研討會報名開始日期：115-10-20， 舉辦日期：115-11-10**
 :::
 
@@ -265,7 +261,7 @@ date-format: long
 <tr class="highlight-row">
 <td class="time-col">1440-1520 (30分鐘+10分鐘QA)</td>
 <td class="topic-cell">
-議題五　重大化學風險管理的新趨勢：從 SDS 危害資訊深化到 QRA 持續重評<br>
+議題五　<a href="林韋呈老師_研討會摘要.pdf" target="_blank" >重大化學風險管理的新趨勢：從 SDS 危害資訊深化到 QRA 持續重評<br>
 <span class="speaker-name">林韋呈 博士</span>
 </td>
 </tr>
