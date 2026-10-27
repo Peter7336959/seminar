@@ -1,16 +1,21 @@
 ---
 title: "國際職業衛生研究趨勢研討會"
 subtitle: "活動簡介"
-date: "2026-10-26"
-date-format: long
+date: today
+#date-format: long
+date-format: "YYYY-MM-DD dddd"
 ---
 
-::: {.callout-tip appearance="simple"}
-- **新增** 議題五 摘要pdf檔 ( 林韋呈 博士 ) **115-10-27**
-- **新增** 議題二 簡報pdf檔 ( Dr. Chikage Nagano ) **115-10-25**
-- **新增** 議題四 簡報pdf檔 ( 莊侑哲 教授 ) **115-10-23**
-- **新增** 議題一 簡報pdf檔 ( Prof. Haruo Hashimoto ) **115-10-22**
-- **研討會報名開始日期：115-10-20， 舉辦日期：115-11-10**
+::: {.callout-note appearance="simple"}
+- **115-10-27 新增** 議題五 摘要pdf檔 ( 林韋呈 博士 )
+
+- **115-10-25 新增** 議題二 簡報pdf檔 ( Dr. Chikage Nagano )
+
+- **115-10-23 新增** 議題四 簡報pdf檔 ( 莊侑哲 教授 )
+
+- **115-10-22 新增** 議題一 簡報pdf檔 ( Prof. Haruo Hashimoto )
+
+- **報名開始日期：115-10-20， 舉辦日期：115-11-10**
 :::
 
 **指導單位：勞動部勞動及職業安全衛生研究所**
