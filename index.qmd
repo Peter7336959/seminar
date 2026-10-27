@@ -1,7 +1,7 @@
 ---
 title: "國際職業衛生研究趨勢研討會"
 subtitle: "活動簡介"
-date: today
+date: last-modified
 #date-format: long
 date-format: "YYYY-MM-DD dddd"
 ---
