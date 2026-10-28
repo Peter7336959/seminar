@@ -80,6 +80,8 @@ date-format: "YYYY-MM-DD dddd"
 5.  費用及報名方式：免費，**採線上報名後電子郵件通知**。
 
 6.  線上報名連結：[google 報名表單](https://docs.google.com/forms/d/e/1FAIpQLSdVc3K6VCUo2zdH1Dqsxn3VdvGn-kUcxiqp3BzKNRcJMXxtGQ/viewform) (報名完成一週後，將公告參與名單於此並寄送電子郵件通知)
+
+    - （註：第一梯次報名確認信件已寄出，第二梯次確認信將於11月2日寄出）
 :::
 
 ## **三、議程**
