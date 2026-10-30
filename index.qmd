@@ -7,6 +7,8 @@ date-format: "YYYY-MM-DD dddd"
 ---
 
 ::: {.callout-note appearance="simple"}
+- **115-10-30** **公告** [報名成功清單](報名成功一覽.html)
+
 - **115-10-27 新增** 議題五 摘要pdf檔 ( 林韋呈 博士 )
 
 - **115-10-25 新增** 議題二 簡報pdf檔 ( Dr. Chikage Nagano )
@@ -81,7 +83,7 @@ date-format: "YYYY-MM-DD dddd"
 
 6.  線上報名連結：[google 報名表單](https://docs.google.com/forms/d/e/1FAIpQLSdVc3K6VCUo2zdH1Dqsxn3VdvGn-kUcxiqp3BzKNRcJMXxtGQ/viewform) (報名完成一週後，將公告參與名單於此並寄送電子郵件通知)
 
-    - （註：第一梯次報名確認信件已寄出，第二梯次確認信將於11月2日寄出）
+    - （註：[報名成功清單](報名成功一覽.html)）
 :::
 
 ## **三、議程**

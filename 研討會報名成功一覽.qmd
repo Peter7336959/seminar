@@ -1,0 +1,346 @@
+---
+title: "研討會報名成功一覽表"
+---
+
+```{=html}
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>報名成功人員公告 · 研討會</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f4f7fc;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "微軟正黑體", "Microsoft JhengHei", sans-serif;
+            padding: 2.5rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            color: #1e293b;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 16px 40px -10px rgba(15, 34, 64, 0.08), 0 0 1px 1px rgba(15, 34, 64, 0.04);
+            padding: 2.2rem 2.5rem;
+        }
+
+        /* 頂部標題與來源 */
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1.2rem;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid #eef3f8;
+            padding-bottom: 1.6rem;
+        }
+
+        .title-section h1 {
+            font-size: 2.1rem;
+            font-weight: 700;
+            color: #0b2545;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        .title-section .subhead {
+            font-size: 1.05rem;
+            color: #475569;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+            margin-bottom: 0.9rem;
+        }
+
+        .badge {
+            background: #e0edff;
+            color: #1d4ed8;
+            padding: 0.25rem 0.85rem;
+            border-radius: 9999px;
+            font-size: 0.88rem;
+            font-weight: 600;
+        }
+
+        /* 容納人數與剩餘名額警示盒 */
+        .capacity-alert {
+            display: inline-flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.8rem 1.6rem;
+            background: #fffdf5;
+            border: 2px solid #fbbf24;
+            color: #78350f;
+            padding: 0.65rem 1.3rem;
+            border-radius: 14px;
+            font-size: 1.02rem;
+            font-weight: 600;
+            box-shadow: 0 4px 14px rgba(251, 191, 36, 0.18);
+        }
+
+        .capacity-alert .highlight {
+            background: #fde68a;
+            color: #451a03;
+            padding: 0.15rem 0.75rem;
+            border-radius: 20px;
+            font-weight: 700;
+        }
+
+        .capacity-alert .remain {
+            color: #c2410c;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .source-link {
+            font-size: 0.92rem;
+            background: #f1f5f9;
+            padding: 0.6rem 1.1rem;
+            border-radius: 9999px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .source-link a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dashed #93c5fd;
+            transition: all 0.2s;
+        }
+
+        .source-link a:hover {
+            color: #1d4ed8;
+            border-bottom-style: solid;
+        }
+
+        /* 說明條 */
+        .meta-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin-bottom: 1.6rem;
+            background: #f8fafc;
+            padding: 0.9rem 1.3rem;
+            border-radius: 14px;
+            font-size: 0.92rem;
+            color: #334155;
+            border: 1px solid #e2e8f0;
+        }
+
+        .meta-info span {
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+        }
+
+        .meta-info i {
+            font-style: normal;
+            background: #e2e8f0;
+            padding: 0.15rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.82rem;
+        }
+
+        /* 表格區：關鍵對齊修正 */
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+            background: #ffffff;
+        }
+
+        table {
+            width: 100%;
+            table-layout: fixed; /* 關鍵：強制鎖定欄寬比例，絕對對齊 */
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        /* 欄寬精確分配 */
+        col.col-date { width: 25%; }
+        col.col-name { width: 30%; }
+        col.col-unit { width: 45%; }
+
+        th {
+            background: #f1f5f9;
+            color: #1e293b;
+            font-weight: 600;
+            text-align: left;
+            padding: 1rem 1.4rem;
+            border-bottom: 2px solid #cbd5e1;
+            white-space: nowrap;
+        }
+
+        td {
+            padding: 0.9rem 1.4rem;
+            border-bottom: 1px solid #edf2f7;
+            color: #334155;
+            vertical-align: middle;
+            word-break: break-all;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #fafcff;
+        }
+
+        tbody tr:hover {
+            background: #f0f7ff;
+            transition: background 0.15s ease;
+        }
+
+        .date-col {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.92rem;
+            color: #2563eb;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .name-col {
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .unit-col {
+            color: #475569;
+        }
+
+        /* 頁尾說明 */
+        .footer-note {
+            margin-top: 1.8rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.88rem;
+            color: #64748b;
+        }
+
+        .record-count {
+            background: #eff6ff;
+            color: #1e40af;
+            padding: 0.35rem 1rem;
+            border-radius: 9999px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.5rem;
+            }
+
+            .container {
+                padding: 1.4rem 1rem;
+                border-radius: 20px;
+            }
+
+            .title-section h1 {
+                font-size: 1.65rem;
+            }
+
+            .header {
+                flex-direction: column;
+            }
+
+            .capacity-alert {
+                font-size: 0.92rem;
+                padding: 0.6rem 0.9rem;
+            }
+
+            th, td {
+                padding: 0.8rem 0.8rem;
+                font-size: 0.88rem;
+            }
+
+            .footer-note {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 頁首與統計 -->
+        <div class="header">
+            <div class="title-section">
+                <h1>報名成功人員公告</h1>
+                <div class="subhead">
+                    研討會報名成功清單（統計至 10月29日）
+                    <span class="badge">已錄取 40 位</span>
+                </div>
+                <div class="capacity-alert">
+                    <span>📌 場地容納人數：<span class="highlight">60 人</span></span>
+                    <span>🪑 剩餘名額：<span class="remain">20 人</span></span>
+                </div>
+            </div>
+            <div class="source-link">
+                🔗 研討會專頁：
+                <a href="https://peter7336959.github.io/seminar/" target="_blank" rel="noopener noreferrer">
+                    peter7336959.github.io/seminar/
+                </a>
+            </div>
+        </div>
+
+        <!-- 規範與提示 -->
+        <div class="meta-info">
+            <span><i>📅</i> 統計期間：2026-10-20 至 2026-10-29</span>
+            <span><i>⏱️</i> 依報名時間序排列（最早在前）</span>
+            <span><i>🔒</i> 姓名及單位均以「O」進行去識別化隱碼處理</span>
+        </div>
+
+        <!-- 名單表格 -->
+        <div class="table-wrapper">
+            <table>
+                <!-- 欄寬嚴格鎖定群組 -->
+                <colgroup>
+                    <col class="col-date">
+                    <col class="col-name">
+                    <col class="col-unit">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>報名日期</th>
+                        <th>姓名</th>
+                        <th>服務單位</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="date-col">10月20日</td><td class="name-col">蔡O枝</td><td class="unit-col">成O單位/公司</td></tr>
+                    <tr><td class="date-col">10月20日</td><td class="name-col">何O信</td><td class="unit-col">CO單位/公司</td></tr>
+                    <tr><td class="date-col">10月20日</td><td class="name-col">李O曜</td><td class="unit-col">優O單位/公司</td></tr>
+                    <tr><td class="date-col">10月20日</td><td class="name-col">H…</td><td class="unit-col">NO單位/公司</td></tr>
+                    <tr><td class="date-col">10月20日</td><td class="name-col">何O靜</td><td class="unit-col">MO單位/公司</td></tr>
+                    <tr><td class="date-col">10月22日</td><td class="name-col">盧O珍</td><td class="unit-col">財O單位/公司</td></tr>
+                    <tr><td class="date-col">10月27日</td><td class="name-col">黃O恩</td><td class="unit-col">中O單位/公司</td></tr>
+                    <tr><td class="date-col">10月27日</td><td class="name-col">陳O正</td><td class="unit-col">中O單位/公司</td></tr>
+                    <tr><td class="date-col">10月28日</td><td class="name-col">林O舒</td><td class="unit-col">長O單位/公司</td></tr>
+                    <tr><td class="date-col">10月28日</td><td class="name-col">李O賢</td><td class="unit-col">國O單位/公司</td></tr>
+                    <tr><td class="date-col">10月28日</td><td class="name-col">黃O怡</td><td class="unit-col">勞O單位/公司</td></tr>
+                    <tr><td class="date-col">10月28日</td><td class="name-col">徐O為</td><td class="unit-col">GO單位/公司</td></tr>
+                    <tr><td class="date-col">10月28日</td><td class="name-col">謝O廷</td><td class="unit-col">立O單位/公司</td></tr>
+                    <tr><td class="date-col">10月28日</td><td class="name-col">林O禹</td><td class="unit-col">力O單位/公司</td></tr>
+                    <tr><td class="date-col">10月28日</td><td class="name-col">張O富</td><td class="unit-col">宏O單位/公司</td></tr>
+                    <tr><td class="date-col">10月28日</td><td class="name-col">林O珈</td><td class="unit-col">威O單位/公司</td></tr>
+                    <tr><td class="date-col">10月28日</td><td class="name-col">謝O倫</td><td class="unit-col">建O單位/公司</td></tr>
+                    <tr><td class="date-col">10月28日</td><td class="name-col">林O興</td><td class="unit-col">登O單位/公司</td></tr>
+```
