@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
@@ -66,36 +67,40 @@
 <meta charset="UTF-8">
 <title>會場座位圖</title>
 <style>
-  body {
-    font-family: 'Microsoft JhengHei', sans-serif;
+  /* 將所有樣式限制在 .seat-map-wrapper 內，避免影響 RMarkdown 其他區塊 */
+  .seat-map-wrapper {
+    font-family: "Microsoft JhengHei", sans-serif;
     background-color: #f4f7f6;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
   }
-  h2 {
+  .seat-map-wrapper h2 {
     color: #333;
     margin-bottom: 10px;
   }
-  .legend {
+  .seat-map-wrapper .legend {
     margin-bottom: 20px;
     font-size: 14px;
     color: #666;
+    text-align: center;
   }
-  .room-container {
-    background-color: #e0e6ed; /* 講堂地板顏色 */
+  .seat-map-wrapper .room-container {
+    background-color: #e0e6ed;
     border: 2px solid #a0aab5;
     border-radius: 10px;
     padding: 30px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
-    gap: 15px; /* 排距 */
+    gap: 15px;
     width: fit-content;
+    margin: 0 auto;
   }
-  .stage {
-    background-color: #6b5b4b; /* 講台顏色 */
+  .seat-map-wrapper .stage {
+    background-color: #6b5b4b;
     color: white;
     text-align: center;
     padding: 15px;
@@ -104,12 +109,12 @@
     border-radius: 5px;
     margin-bottom: 20px;
   }
-  .row {
+  .seat-map-wrapper .row {
     display: flex;
     justify-content: center;
-    gap: 20px; /* 走道/座位間距 */
+    gap: 20px;
   }
-  .seat {
+  .seat-map-wrapper .seat {
     width: 50px;
     height: 50px;
     display: flex;
@@ -119,29 +124,86 @@
     font-weight: bold;
     font-size: 16px;
     box-shadow: inset 0 -3px 0 rgba(0,0,0,0.2);
-    cursor: default;
-    transition: transform 0.2s;
+    cursor: pointer;
+    transition: transform 0.2s, outline 0.1s;
+    user-select: none;
+    position: relative; /* 關鍵：讓內部的浮動視窗以此為基準 */
   }
-  .seat:hover {
+  .seat-map-wrapper .seat:hover {
     transform: scale(1.1);
+    z-index: 20;
   }
-  /* 座位顏色分類 */
-  .seat.vip-staff { background-color: #ff9999; color: #333; } /* 粉紅：1~17號 */
-  .seat.normal { background-color: #7eb8da; color: white; } /* 一般報名藍 */
-  .seat.empty { background-color: #ccc; color: #999; box-shadow: none; border: 2px dashed #aaa; background-color: transparent;}
+  .seat-map-wrapper .seat.active {
+    outline: 3px solid #333;
+    outline-offset: 2px;
+    transform: scale(1.1);
+    z-index: 30;
+  }
+  .seat-map-wrapper .seat.vip-staff { background-color: #ff9999; color: #333; }
+  .seat-map-wrapper .seat.normal { background-color: #7eb8da; color: white; }
+  .seat-map-wrapper .seat.empty { 
+    background-color: transparent; 
+    color: transparent; 
+    box-shadow: none; 
+    border: 2px dashed #aaa; 
+    cursor: default;
+    pointer-events: none;
+  }
+  .seat-map-wrapper .aisle { width: 30px; }
+  .seat-map-wrapper .seat-group { display: flex; gap: 10px; }
 
-  .aisle {
-    width: 30px;
+  /* 浮動視窗 (改為相對於座位定位) */
+  .seat-map-wrapper .tooltip {
+    position: absolute;
+    bottom: 100%; /* 浮在座位上方 */
+    left: 50%;
+    transform: translateX(-50%) translateY(10px); /* 初始位置稍微往下 */
+    background-color: rgba(255, 255, 255, 0.98);
+    border: 2px solid #6b5b4b;
+    border-radius: 8px;
+    padding: 10px 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, transform 0.2s;
+    z-index: 100;
+    text-align: left;
+    white-space: nowrap;
+    min-width: 150px;
+  }
+  .seat-map-wrapper .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -8px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #6b5b4b transparent transparent transparent;
+  }
+  /* 當座位被點擊時，顯示裡面的浮動視窗 */
+  .seat-map-wrapper .seat.active .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+  .seat-map-wrapper .tooltip-name {
+    font-weight: bold;
+    color: #d32f2f;
+    font-size: 18px;
+    margin-bottom: 5px;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 3px;
+  }
+  .seat-map-wrapper .tooltip-unit {
+    color: #555;
+    font-size: 14px;
+    white-space: normal;
+    max-width: 250px;
   }
 
-  /* 針對3,4,3的排列，用外層容器包裝 */
-  .seat-group {
-    display: flex;
-    gap: 10px;
-  }
-
-  /* 名冊樣式 */
-  .roster {
+  .seat-map-wrapper .roster {
     margin-top: 40px;
     width: 100%;
     max-width: 800px;
@@ -149,191 +211,193 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-left: auto;
+    margin-right: auto;
   }
-  .roster h3 {
+  .seat-map-wrapper .roster h3 {
     border-bottom: 2px solid #7eb8da;
     padding-bottom: 10px;
     color: #333;
   }
-  table {
+  .seat-map-wrapper table {
     width: 100%;
     border-collapse: collapse;
     font-size: 14px;
   }
-  th, td {
+  .seat-map-wrapper th, .seat-map-wrapper td {
     padding: 8px 12px;
     text-align: left;
     border-bottom: 1px solid #eee;
   }
-  th {
-    background-color: #f8f9fa;
-    color: #555;
-  }
-  .highlight-pink { background-color: #fff0f0; }
+  .seat-map-wrapper th { background-color: #f8f9fa; color: #555; }
+  .seat-map-wrapper .highlight-pink { background-color: #fff0f0; }
 </style>
 </head>
 <body>
 
+<div class="seat-map-wrapper">
   <h2>會場座位編號圖</h2>
   <div class="legend">
     <span style="display:inline-block; width:15px; height:15px; background:#ff9999; border-radius:3px; vertical-align:middle; margin-right:5px;"></span> 貴賓/長官/教授/工作人員 (1~17號)
     <span style="display:inline-block; width:15px; height:15px; background:#7eb8da; border-radius:3px; vertical-align:middle; margin-left:15px; margin-right:5px;"></span> 一般報名 (18~69號)
+    <br><br>
+    <span style="color:#d32f2f; font-weight:bold;">★ 提示：點擊上方任何一個座位號碼，會在上方浮現該座位的人員資訊。</span>
   </div>
 
   <div class="room-container">
     <div class="stage">講 台 區 域</div>
 
-    <!-- 第一排 (3, 4, 3) -->
+    <!-- 第一排 -->
     <div class="row">
       <div class="seat-group">
-        <div class="seat vip-staff">1</div>
-        <div class="seat vip-staff">2</div>
-        <div class="seat vip-staff">3</div>
+        <div class="seat vip-staff" data-seat="1">1<div class="tooltip"><div class="tooltip-name">司儀</div><div class="tooltip-unit">工作人員</div></div></div>
+        <div class="seat vip-staff" data-seat="2">2<div class="tooltip"><div class="tooltip-name">主持人</div><div class="tooltip-unit">工作人員</div></div></div>
+        <div class="seat vip-staff" data-seat="3">3<div class="tooltip"><div class="tooltip-name">黃喬恩</div><div class="tooltip-unit">中國勞工安全衛生管理學會</div></div></div>
       </div>
       <div class="aisle"></div>
       <div class="seat-group">
-        <div class="seat vip-staff">4</div>
-        <div class="seat vip-staff">5</div>
-        <div class="seat vip-staff">6</div>
-        <div class="seat vip-staff">7</div>
+        <div class="seat vip-staff" data-seat="4">4<div class="tooltip"><div class="tooltip-name">蔡朋枝 教授</div><div class="tooltip-unit">計畫主持人</div></div></div>
+        <div class="seat vip-staff" data-seat="5">5<div class="tooltip"><div class="tooltip-name">鄒子廉所長</div><div class="tooltip-unit">勞安所</div></div></div>
+        <div class="seat vip-staff" data-seat="6">6<div class="tooltip"><div class="tooltip-name">Prof. Haruo Hashimoto</div><div class="tooltip-unit">日本專家學者</div></div></div>
+        <div class="seat vip-staff" data-seat="7">7<div class="tooltip"><div class="tooltip-name">Dr. Chikage Nagano</div><div class="tooltip-unit">日本專家學者</div></div></div>
       </div>
       <div class="aisle"></div>
       <div class="seat-group">
-        <div class="seat vip-staff">8</div>
-        <div class="seat vip-staff">9</div>
-        <div class="seat vip-staff">10</div>
+        <div class="seat vip-staff" data-seat="8">8<div class="tooltip"><div class="tooltip-name">郭浩然 教授</div><div class="tooltip-unit">特邀講座</div></div></div>
+        <div class="seat vip-staff" data-seat="9">9<div class="tooltip"><div class="tooltip-name">莊侑哲 教授</div><div class="tooltip-unit">特邀講座</div></div></div>
+        <div class="seat vip-staff" data-seat="10">10<div class="tooltip"><div class="tooltip-name">林韋呈 博士</div><div class="tooltip-unit">特邀講座</div></div></div>
       </div>
     </div>
 
-    <!-- 第二排 (3, 4, 3) -->
+    <!-- 第二排 -->
     <div class="row">
       <div class="seat-group">
-        <div class="seat vip-staff">11</div>
-        <div class="seat vip-staff">12</div>
-        <div class="seat vip-staff">13</div>
+        <div class="seat vip-staff" data-seat="11">11<div class="tooltip"><div class="tooltip-name">劉宏信 理事長</div><div class="tooltip-unit">中國勞工安全衛生管理學會</div></div></div>
+        <div class="seat vip-staff" data-seat="12">12<div class="tooltip"><div class="tooltip-name">李國懋 秘書長</div><div class="tooltip-unit">中國勞工安全衛生管理學會</div></div></div>
+        <div class="seat vip-staff" data-seat="13">13<div class="tooltip"><div class="tooltip-name">吳幸娟</div><div class="tooltip-unit">勞安所</div></div></div>
       </div>
       <div class="aisle"></div>
       <div class="seat-group">
-        <div class="seat vip-staff">14</div>
-        <div class="seat vip-staff">15</div>
-        <div class="seat vip-staff">16</div>
-        <div class="seat vip-staff">17</div>
+        <div class="seat vip-staff" data-seat="14">14<div class="tooltip"><div class="tooltip-name">劉立文 組長</div><div class="tooltip-unit">勞安所</div></div></div>
+        <div class="seat vip-staff" data-seat="15">15<div class="tooltip"><div class="tooltip-name">林裕舒 課長</div><div class="tooltip-unit">長春石油化學公司</div></div></div>
+        <div class="seat vip-staff" data-seat="16">16<div class="tooltip"><div class="tooltip-name">陳志傑 教授</div><div class="tooltip-unit">臺大公衛</div></div></div>
+        <div class="seat vip-staff" data-seat="17">17<div class="tooltip"><div class="tooltip-name">林瑜雯 教授</div><div class="tooltip-unit">輔仁大學</div></div></div>
       </div>
       <div class="aisle"></div>
       <div class="seat-group">
-        <div class="seat normal">18</div>
-        <div class="seat normal">19</div>
-        <div class="seat normal">20</div>
+        <div class="seat normal" data-seat="18">18<div class="tooltip"><div class="tooltip-name">何寧靜</div><div class="tooltip-unit">MSA</div></div></div>
+        <div class="seat normal" data-seat="19">19<div class="tooltip"><div class="tooltip-name">何明信</div><div class="tooltip-unit">高市勞檢</div></div></div>
+        <div class="seat normal" data-seat="20">20<div class="tooltip"><div class="tooltip-name">李如曜</div><div class="tooltip-unit">優實安全衛生管理顧問公司</div></div></div>
       </div>
     </div>
 
-    <!-- 第三排 (3, 4, 3) -->
+    <!-- 第三排 -->
     <div class="row">
       <div class="seat-group">
-        <div class="seat normal">21</div>
-        <div class="seat normal">22</div>
-        <div class="seat normal">23</div>
+        <div class="seat normal" data-seat="21">21<div class="tooltip"><div class="tooltip-name">盧珮珍</div><div class="tooltip-unit">財團法人職業災害預防及重建中心</div></div></div>
+        <div class="seat normal" data-seat="22">22<div class="tooltip"><div class="tooltip-name">陳敏正</div><div class="tooltip-unit">中鼎工程</div></div></div>
+        <div class="seat normal" data-seat="23">23<div class="tooltip"><div class="tooltip-name">李俊賢 Lukas LEE</div><div class="tooltip-unit">國家衛生研究院</div></div></div>
       </div>
       <div class="aisle"></div>
       <div class="seat-group">
-        <div class="seat normal">24</div>
-        <div class="seat normal">25</div>
-        <div class="seat normal">26</div>
-        <div class="seat normal">27</div>
+        <div class="seat normal" data-seat="24">24<div class="tooltip"><div class="tooltip-name">黃正怡</div><div class="tooltip-unit">勞動部職業安全衛生署中區職業安全衛生中心</div></div></div>
+        <div class="seat normal" data-seat="25">25<div class="tooltip"><div class="tooltip-name">徐夢為</div><div class="tooltip-unit">GE</div></div></div>
+        <div class="seat normal" data-seat="26">26<div class="tooltip"><div class="tooltip-name">謝竺廷</div><div class="tooltip-unit">立信工營造股份有限公司</div></div></div>
+        <div class="seat normal" data-seat="27">27<div class="tooltip"><div class="tooltip-name">林福禹</div><div class="tooltip-unit">力方開發事業股份有限公司</div></div></div>
       </div>
       <div class="aisle"></div>
       <div class="seat-group">
-        <div class="seat normal">28</div>
-        <div class="seat normal">29</div>
-        <div class="seat normal">30</div>
+        <div class="seat normal" data-seat="28">28<div class="tooltip"><div class="tooltip-name">張志富</div><div class="tooltip-unit">宏偉營造股份有限公司</div></div></div>
+        <div class="seat normal" data-seat="29">29<div class="tooltip"><div class="tooltip-name">林彤珈</div><div class="tooltip-unit">威勝營造有限公司</div></div></div>
+        <div class="seat normal" data-seat="30">30<div class="tooltip"><div class="tooltip-name">謝家倫</div><div class="tooltip-unit">建國工程股份有限公司</div></div></div>
       </div>
     </div>
 
-    <!-- 第四排 (3, 4, 3) -->
+    <!-- 第四排 -->
     <div class="row">
       <div class="seat-group">
-        <div class="seat normal">31</div>
-        <div class="seat normal">32</div>
-        <div class="seat normal">33</div>
+        <div class="seat normal" data-seat="31">31<div class="tooltip"><div class="tooltip-name">林政興</div><div class="tooltip-unit">登山營造股份有限公司</div></div></div>
+        <div class="seat normal" data-seat="32">32<div class="tooltip"><div class="tooltip-name">鄭胡明</div><div class="tooltip-unit">新東陽營造股份有限公司</div></div></div>
+        <div class="seat normal" data-seat="33">33<div class="tooltip"><div class="tooltip-name">蔣念慈</div><div class="tooltip-unit">復空食品股份有限公司</div></div></div>
       </div>
       <div class="aisle"></div>
       <div class="seat-group">
-        <div class="seat normal">34</div>
-        <div class="seat normal">35</div>
-        <div class="seat normal">36</div>
-        <div class="seat normal">37</div>
+        <div class="seat normal" data-seat="34">34<div class="tooltip"><div class="tooltip-name">陳柏榕</div><div class="tooltip-unit">帝旺工程有限公司</div></div></div>
+        <div class="seat normal" data-seat="35">35<div class="tooltip"><div class="tooltip-name">吳浥芸</div><div class="tooltip-unit">金藏營造工程股份有限公司</div></div></div>
+        <div class="seat normal" data-seat="36">36<div class="tooltip"><div class="tooltip-name">陳識涵</div><div class="tooltip-unit">台創工程技術顧問有限公司</div></div></div>
+        <div class="seat normal" data-seat="37">37<div class="tooltip"><div class="tooltip-name">林淑如</div><div class="tooltip-unit">元太科技</div></div></div>
       </div>
       <div class="aisle"></div>
       <div class="seat-group">
-        <div class="seat normal">38</div>
-        <div class="seat normal">39</div>
-        <div class="seat normal">40</div>
+        <div class="seat normal" data-seat="38">38<div class="tooltip"><div class="tooltip-name">張瑋玨</div><div class="tooltip-unit">晃茂營造</div></div></div>
+        <div class="seat normal" data-seat="39">39<div class="tooltip"><div class="tooltip-name">林思彤</div><div class="tooltip-unit">根基營造股份有限公司</div></div></div>
+        <div class="seat normal" data-seat="40">40<div class="tooltip"><div class="tooltip-name">李豐耀</div><div class="tooltip-unit">和撒那通運有限公司</div></div></div>
       </div>
     </div>
 
-    <!-- 第五排 (3, 4, 3) -->
+    <!-- 第五排 -->
     <div class="row">
       <div class="seat-group">
-        <div class="seat normal">41</div>
-        <div class="seat normal">42</div>
-        <div class="seat normal">43</div>
+        <div class="seat normal" data-seat="41">41<div class="tooltip"><div class="tooltip-name">陳焜燿</div><div class="tooltip-unit">永祥科技顧問有限公司</div></div></div>
+        <div class="seat normal" data-seat="42">42<div class="tooltip"><div class="tooltip-name">Lukas JH Lee</div><div class="tooltip-unit">National Health Research Institutes</div></div></div>
+        <div class="seat normal" data-seat="43">43<div class="tooltip"><div class="tooltip-name">邱芃樺</div><div class="tooltip-unit">臺灣職業衛生服務學會</div></div></div>
       </div>
       <div class="aisle"></div>
       <div class="seat-group">
-        <div class="seat normal">44</div>
-        <div class="seat normal">45</div>
-        <div class="seat normal">46</div>
-        <div class="seat normal">47</div>
+        <div class="seat normal" data-seat="44">44<div class="tooltip"><div class="tooltip-name">虞善琦</div><div class="tooltip-unit">輔育工會</div></div></div>
+        <div class="seat normal" data-seat="45">45<div class="tooltip"><div class="tooltip-name">呂柏輝</div><div class="tooltip-unit">財團法人職業災害預防及重建中心</div></div></div>
+        <div class="seat normal" data-seat="46">46<div class="tooltip"><div class="tooltip-name">王晨珉</div><div class="tooltip-unit">泛亞工程</div></div></div>
+        <div class="seat normal" data-seat="47">47<div class="tooltip"><div class="tooltip-name">呂映潔</div><div class="tooltip-unit">臺灣職業衛生服務學會</div></div></div>
       </div>
       <div class="aisle"></div>
       <div class="seat-group">
-        <div class="seat normal">48</div>
-        <div class="seat normal">49</div>
-        <div class="seat normal">50</div>
+        <div class="seat normal" data-seat="48">48<div class="tooltip"><div class="tooltip-name">吳宜蓁</div><div class="tooltip-unit">成功大學</div></div></div>
+        <div class="seat normal" data-seat="49">49<div class="tooltip"><div class="tooltip-name">徐雅媛</div><div class="tooltip-unit">勞動部勞動及職業安全衛生研究所</div></div></div>
+        <div class="seat normal" data-seat="50">50<div class="tooltip"><div class="tooltip-name">賴佳玲</div><div class="tooltip-unit">中福營造股份有限公司</div></div></div>
       </div>
     </div>
 
-    <!-- 第六排 (3, 4, 3) -->
+    <!-- 第六排 -->
     <div class="row">
       <div class="seat-group">
-        <div class="seat normal">51</div>
-        <div class="seat normal">52</div>
-        <div class="seat normal">53</div>
+        <div class="seat normal" data-seat="51">51<div class="tooltip"><div class="tooltip-name">林榮竹</div><div class="tooltip-unit">夆典科技開發股份有限公司</div></div></div>
+        <div class="seat normal" data-seat="52">52<div class="tooltip"><div class="tooltip-name">鐘順輝</div><div class="tooltip-unit">勞動部勞動及職業安全衛生研究所</div></div></div>
+        <div class="seat normal" data-seat="53">53<div class="tooltip"><div class="tooltip-name">黃詩凱</div><div class="tooltip-unit">臺中市勞動檢查處</div></div></div>
       </div>
       <div class="aisle"></div>
       <div class="seat-group">
-        <div class="seat normal">54</div>
-        <div class="seat normal">55</div>
-        <div class="seat normal">56</div>
-        <div class="seat normal">57</div>
+        <div class="seat normal" data-seat="54">54<div class="tooltip"><div class="tooltip-name">張文棋</div><div class="tooltip-unit">瀚博職業衛生聯合技師事務所</div></div></div>
+        <div class="seat normal" data-seat="55">55<div class="tooltip"><div class="tooltip-name">朱偉銘</div><div class="tooltip-unit">輔仁大學</div></div></div>
+        <div class="seat normal" data-seat="56">56<div class="tooltip"><div class="tooltip-name">朱嘉龍</div><div class="tooltip-unit">元呈</div></div></div>
+        <div class="seat normal" data-seat="57">57<div class="tooltip"><div class="tooltip-name">李英婷</div><div class="tooltip-unit">財團法人職業災害預防及重建中心</div></div></div>
       </div>
       <div class="aisle"></div>
       <div class="seat-group">
-        <div class="seat normal">58</div>
-        <div class="seat normal">59</div>
-        <div class="seat normal">60</div>
+        <div class="seat normal" data-seat="58">58<div class="tooltip"><div class="tooltip-name">林騄潭</div><div class="tooltip-unit">璉嶸營造</div></div></div>
+        <div class="seat normal" data-seat="59">59<div class="tooltip"><div class="tooltip-name">陳宜傳</div><div class="tooltip-unit">臺灣大學</div></div></div>
+        <div class="seat normal" data-seat="60">60<div class="tooltip"><div class="tooltip-name">林芷均</div><div class="tooltip-unit">鉅鋼機械</div></div></div>
       </div>
     </div>
 
-    <!-- 第七排 (3, 4, 3) -->
+    <!-- 第七排 -->
     <div class="row">
       <div class="seat-group">
-        <div class="seat normal">61</div>
-        <div class="seat normal">62</div>
-        <div class="seat normal">63</div>
+        <div class="seat normal" data-seat="61">61<div class="tooltip"><div class="tooltip-name">翁肇鴻</div><div class="tooltip-unit">方傑有限公司</div></div></div>
+        <div class="seat normal" data-seat="62">62<div class="tooltip"><div class="tooltip-name">何宗軒</div><div class="tooltip-unit">國立臺灣師範大學</div></div></div>
+        <div class="seat normal" data-seat="63">63<div class="tooltip"><div class="tooltip-name">潘儀聰</div><div class="tooltip-unit">文化大學</div></div></div>
       </div>
       <div class="aisle"></div>
       <div class="seat-group">
-        <div class="seat normal">64</div>
-        <div class="seat normal">65</div>
-        <div class="seat normal">66</div>
-        <div class="seat normal">67</div>
+        <div class="seat normal" data-seat="64">64<div class="tooltip"><div class="tooltip-name">范姜孟含</div><div class="tooltip-unit">台灣中油公司</div></div></div>
+        <div class="seat normal" data-seat="65">65<div class="tooltip"><div class="tooltip-name">李柏宏</div><div class="tooltip-unit">勞動部勞安所</div></div></div>
+        <div class="seat normal" data-seat="66">66<div class="tooltip"><div class="tooltip-name">陳欣婷</div><div class="tooltip-unit">新北市政府勞動檢查處</div></div></div>
+        <div class="seat normal" data-seat="67">67<div class="tooltip"><div class="tooltip-name">吳念臻</div><div class="tooltip-unit">新北市勞動檢查處</div></div></div>
       </div>
       <div class="aisle"></div>
       <div class="seat-group">
-        <div class="seat normal">68</div>
-        <div class="seat normal">69</div>
-        <div class="seat empty"></div> <!-- 70號取消 -->
+        <div class="seat normal" data-seat="68">68<div class="tooltip"><div class="tooltip-name">陳春萬</div><div class="tooltip-unit">勞安所</div></div></div>
+        <div class="seat normal" data-seat="69">69<div class="tooltip"><div class="tooltip-name">李昆哲</div><div class="tooltip-unit">勞安所</div></div></div>
+        <div class="seat empty"></div>
       </div>
     </div>
   </div>
@@ -350,7 +414,6 @@
         </tr>
       </thead>
       <tbody>
-        <!-- 第一排 (1~10) 粉紅底色 -->
         <tr class="highlight-pink"><td>1</td><td>司儀</td><td>工作人員</td></tr>
         <tr class="highlight-pink"><td>2</td><td>主持人</td><td>工作人員</td></tr>
         <tr class="highlight-pink"><td>3</td><td>黃喬恩</td><td>中國勞工安全衛生管理學會</td></tr>
@@ -361,8 +424,6 @@
         <tr class="highlight-pink"><td>8</td><td>郭浩然 教授</td><td>特邀講座</td></tr>
         <tr class="highlight-pink"><td>9</td><td>莊侑哲 教授</td><td>特邀講座</td></tr>
         <tr class="highlight-pink"><td>10</td><td>林韋呈 博士</td><td>特邀講座</td></tr>
-
-        <!-- 第二排 (11~20) 11~17粉紅底色 -->
         <tr class="highlight-pink"><td>11</td><td>劉宏信 理事長</td><td>中國勞工安全衛生管理學會</td></tr>
         <tr class="highlight-pink"><td>12</td><td>李國懋 秘書長</td><td>中國勞工安全衛生管理學會</td></tr>
         <tr class="highlight-pink"><td>13</td><td>吳幸娟</td><td>勞安所</td></tr>
@@ -373,8 +434,6 @@
         <tr><td>18</td><td>何寧靜</td><td>MSA</td></tr>
         <tr><td>19</td><td>何明信</td><td>高市勞檢</td></tr>
         <tr><td>20</td><td>李如曜</td><td>優實安全衛生管理顧問公司</td></tr>
-
-        <!-- 第三排 (21~30) -->
         <tr><td>21</td><td>盧珮珍</td><td>財團法人職業災害預防及重建中心</td></tr>
         <tr><td>22</td><td>陳敏正</td><td>中鼎工程</td></tr>
         <tr><td>23</td><td>李俊賢 Lukas LEE</td><td>國家衛生研究院</td></tr>
@@ -385,8 +444,6 @@
         <tr><td>28</td><td>張志富</td><td>宏偉營造股份有限公司</td></tr>
         <tr><td>29</td><td>林彤珈</td><td>威勝營造有限公司</td></tr>
         <tr><td>30</td><td>謝家倫</td><td>建國工程股份有限公司</td></tr>
-
-        <!-- 第四排 (31~40) -->
         <tr><td>31</td><td>林政興</td><td>登山營造股份有限公司</td></tr>
         <tr><td>32</td><td>鄭胡明</td><td>新東陽營造股份有限公司</td></tr>
         <tr><td>33</td><td>蔣念慈</td><td>復空食品股份有限公司</td></tr>
@@ -397,8 +454,6 @@
         <tr><td>38</td><td>張瑋玨</td><td>晃茂營造</td></tr>
         <tr><td>39</td><td>林思彤</td><td>根基營造股份有限公司</td></tr>
         <tr><td>40</td><td>李豐耀</td><td>和撒那通運有限公司</td></tr>
-
-        <!-- 第五排 (41~50) -->
         <tr><td>41</td><td>陳焜燿</td><td>永祥科技顧問有限公司</td></tr>
         <tr><td>42</td><td>Lukas JH Lee</td><td>National Health Research Institutes</td></tr>
         <tr><td>43</td><td>邱芃樺</td><td>臺灣職業衛生服務學會</td></tr>
@@ -409,8 +464,6 @@
         <tr><td>48</td><td>吳宜蓁</td><td>成功大學</td></tr>
         <tr><td>49</td><td>徐雅媛</td><td>勞動部勞動及職業安全衛生研究所</td></tr>
         <tr><td>50</td><td>賴佳玲</td><td>中福營造股份有限公司</td></tr>
-
-        <!-- 第六排 (51~60) -->
         <tr><td>51</td><td>林榮竹</td><td>夆典科技開發股份有限公司</td></tr>
         <tr><td>52</td><td>鐘順輝</td><td>勞動部勞動及職業安全衛生研究所</td></tr>
         <tr><td>53</td><td>黃詩凱</td><td>臺中市勞動檢查處</td></tr>
@@ -421,8 +474,6 @@
         <tr><td>58</td><td>林騄潭</td><td>璉嶸營造</td></tr>
         <tr><td>59</td><td>陳宜傳</td><td>臺灣大學</td></tr>
         <tr><td>60</td><td>林芷均</td><td>鉅鋼機械</td></tr>
-
-        <!-- 第七排 (61~69) -->
         <tr><td>61</td><td>翁肇鴻</td><td>方傑有限公司</td></tr>
         <tr><td>62</td><td>何宗軒</td><td>國立臺灣師範大學</td></tr>
         <tr><td>63</td><td>潘儀聰</td><td>文化大學</td></tr>
@@ -435,6 +486,32 @@
       </tbody>
     </table>
   </div>
+</div>
+
+<script>
+  // 限制在 wrapper 內執行，避免干擾 RMarkdown 其他區塊
+  (function() {
+    const seats = document.querySelectorAll(".seat-map-wrapper .seat:not(.empty)");
+    
+    seats.forEach(seat => {
+      seat.addEventListener("click", function(e) {
+        e.stopPropagation(); // 防止事件冒泡
+        
+        // 移除所有 active 狀態
+        seats.forEach(s => s.classList.remove("active"));
+        
+        // 加上當前點擊的 active 狀態
+        this.classList.add("active");
+      });
+    });
+
+    // 點擊畫面空白處時，取消所有選取狀態
+    document.addEventListener("click", function() {
+      seats.forEach(s => s.classList.remove("active"));
+    });
+  })();
+</script>
 
 </body>
 </html>
+', sep = "")
