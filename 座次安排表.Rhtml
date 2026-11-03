@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>會場座位圖</title>
+<style>
+  body {
+    font-family: 'Microsoft JhengHei', sans-serif;
+    background-color: #f4f7f6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .legend {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #666;
+  }
+  .room-container {
+    background-color: #e0e6ed; /* 講堂地板顏色 */
+    border: 2px solid #a0aab5;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* 排距 */
+    width: fit-content;
+  }
+  .stage {
+    background-color: #6b5b4b; /* 講台顏色 */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  .row {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* 走道/座位間距 */
+  }
+  .seat {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: inset 0 -3px 0 rgba(0,0,0,0.2);
+    cursor: default;
+    transition: transform 0.2s;
+  }
+  .seat:hover {
+    transform: scale(1.1);
+  }
+  /* 座位顏色分類 */
+  .seat.vip-staff { background-color: #ff9999; color: #333; } /* 粉紅：1~17號 */
+  .seat.normal { background-color: #7eb8da; color: white; } /* 一般報名藍 */
+  .seat.empty { background-color: #ccc; color: #999; box-shadow: none; border: 2px dashed #aaa; background-color: transparent;}
+
+  .aisle {
+    width: 30px;
+  }
+
+  /* 針對3,4,3的排列，用外層容器包裝 */
+  .seat-group {
+    display: flex;
+    gap: 10px;
+  }
+
+  /* 名冊樣式 */
+  .roster {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 800px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  .roster h3 {
+    border-bottom: 2px solid #7eb8da;
+    padding-bottom: 10px;
+    color: #333;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  th, td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  th {
+    background-color: #f8f9fa;
+    color: #555;
+  }
+  .highlight-pink { background-color: #fff0f0; }
+</style>
+</head>
+<body>
+
+  <h2>會場座位編號圖</h2>
+  <div class="legend">
+    <span style="display:inline-block; width:15px; height:15px; background:#ff9999; border-radius:3px; vertical-align:middle; margin-right:5px;"></span> 貴賓/長官/教授/工作人員 (1~17號)
+    <span style="display:inline-block; width:15px; height:15px; background:#7eb8da; border-radius:3px; vertical-align:middle; margin-left:15px; margin-right:5px;"></span> 一般報名 (18~69號)
+  </div>
+
+  <div class="room-container">
+    <div class="stage">講 台 區 域</div>
+
+    <!-- 第一排 (3, 4, 3) -->
+    <div class="row">
+      <div class="seat-group">
+        <div class="seat vip-staff">1</div>
+        <div class="seat vip-staff">2</div>
+        <div class="seat vip-staff">3</div>
+      </div>
+      <div class="aisle"></div>
+      <div class="seat-group">
+        <div class="seat vip-staff">4</div>
+        <div class="seat vip-staff">5</div>
+        <div class="seat vip-staff">6</div>
+        <div class="seat vip-staff">7</div>
+      </div>
+      <div class="aisle"></div>
+      <div class="seat-group">
+        <div class="seat vip-staff">8</div>
+        <div class="seat vip-staff">9</div>
+        <div class="seat vip-staff">10</div>
+      </div>
+    </div>
+
+    <!-- 第二排 (3, 4, 3) -->
+    <div class="row">
+      <div class="seat-group">
+        <div class="seat vip-staff">11</div>
+        <div class="seat vip-staff">12</div>
+        <div class="seat vip-staff">13</div>
+      </div>
+      <div class="aisle"></div>
+      <div class="seat-group">
+        <div class="seat vip-staff">14</div>
+        <div class="seat vip-staff">15</div>
+        <div class="seat vip-staff">16</div>
+        <div class="seat vip-staff">17</div>
+      </div>
+      <div class="aisle"></div>
+      <div class="seat-group">
+        <div class="seat normal">18</div>
+        <div class="seat normal">19</div>
+        <div class="seat normal">20</div>
+      </div>
+    </div>
+
+    <!-- 第三排 (3, 4, 3) -->
+    <div class="row">
+      <div class="seat-group">
+        <div class="seat normal">21</div>
+        <div class="seat normal">22</div>
+        <div class="seat normal">23</div>
+      </div>
+      <div class="aisle"></div>
+      <div class="seat-group">
+        <div class="seat normal">24</div>
+        <div class="seat normal">25</div>
+        <div class="seat normal">26</div>
+        <div class="seat normal">27</div>
+      </div>
+      <div class="aisle"></div>
+      <div class="seat-group">
+        <div class="seat normal">28</div>
+        <div class="seat normal">29</div>
+        <div class="seat normal">30</div>
+      </div>
+    </div>
+
+    <!-- 第四排 (3, 4, 3) -->
+    <div class="row">
+      <div class="seat-group">
+        <div class="seat normal">31</div>
+        <div class="seat normal">32</div>
+        <div class="seat normal">33</div>
+      </div>
+      <div class="aisle"></div>
+      <div class="seat-group">
+        <div class="seat normal">34</div>
+        <div class="seat normal">35</div>
+        <div class="seat normal">36</div>
+        <div class="seat normal">37</div>
+      </div>
+      <div class="aisle"></div>
+      <div class="seat-group">
+        <div class="seat normal">38</div>
+        <div class="seat normal">39</div>
+        <div class="seat normal">40</div>
+      </div>
+    </div>
+
+    <!-- 第五排 (3, 4, 3) -->
+    <div class="row">
+      <div class="seat-group">
+        <div class="seat normal">41</div>
+        <div class="seat normal">42</div>
+        <div class="seat normal">43</div>
+      </div>
+      <div class="aisle"></div>
+      <div class="seat-group">
+        <div class="seat normal">44</div>
+        <div class="seat normal">45</div>
+        <div class="seat normal">46</div>
+        <div class="seat normal">47</div>
+      </div>
+      <div class="aisle"></div>
+      <div class="seat-group">
+        <div class="seat normal">48</div>
+        <div class="seat normal">49</div>
+        <div class="seat normal">50</div>
+      </div>
+    </div>
+
+    <!-- 第六排 (3, 4, 3) -->
+    <div class="row">
+      <div class="seat-group">
+        <div class="seat normal">51</div>
+        <div class="seat normal">52</div>
+        <div class="seat normal">53</div>
+      </div>
+      <div class="aisle"></div>
+      <div class="seat-group">
+        <div class="seat normal">54</div>
+        <div class="seat normal">55</div>
+        <div class="seat normal">56</div>
+        <div class="seat normal">57</div>
+      </div>
+      <div class="aisle"></div>
+      <div class="seat-group">
+        <div class="seat normal">58</div>
+        <div class="seat normal">59</div>
+        <div class="seat normal">60</div>
+      </div>
+    </div>
+
+    <!-- 第七排 (3, 4, 3) -->
+    <div class="row">
+      <div class="seat-group">
+        <div class="seat normal">61</div>
+        <div class="seat normal">62</div>
+        <div class="seat normal">63</div>
+      </div>
+      <div class="aisle"></div>
+      <div class="seat-group">
+        <div class="seat normal">64</div>
+        <div class="seat normal">65</div>
+        <div class="seat normal">66</div>
+        <div class="seat normal">67</div>
+      </div>
+      <div class="aisle"></div>
+      <div class="seat-group">
+        <div class="seat normal">68</div>
+        <div class="seat normal">69</div>
+        <div class="seat empty"></div> <!-- 70號取消 -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 名冊清單 -->
+  <div class="roster">
+    <h3>與會人員座位名冊對照表</h3>
+    <table>
+      <thead>
+        <tr>
+          <th width="10%">座位編號</th>
+          <th width="25%">姓名</th>
+          <th width="65%">單位/職稱</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 第一排 (1~10) 粉紅底色 -->
+        <tr class="highlight-pink"><td>1</td><td>司儀</td><td>工作人員</td></tr>
+        <tr class="highlight-pink"><td>2</td><td>主持人</td><td>工作人員</td></tr>
+        <tr class="highlight-pink"><td>3</td><td>黃喬恩</td><td>中國勞工安全衛生管理學會</td></tr>
+        <tr class="highlight-pink"><td>4</td><td>蔡朋枝 教授</td><td>計畫主持人</td></tr>
+        <tr class="highlight-pink"><td>5</td><td>鄒子廉所長</td><td>勞安所</td></tr>
+        <tr class="highlight-pink"><td>6</td><td>Prof. Haruo Hashimoto</td><td>日本專家學者</td></tr>
+        <tr class="highlight-pink"><td>7</td><td>Dr. Chikage Nagano</td><td>日本專家學者</td></tr>
+        <tr class="highlight-pink"><td>8</td><td>郭浩然 教授</td><td>特邀講座</td></tr>
+        <tr class="highlight-pink"><td>9</td><td>莊侑哲 教授</td><td>特邀講座</td></tr>
+        <tr class="highlight-pink"><td>10</td><td>林韋呈 博士</td><td>特邀講座</td></tr>
+
+        <!-- 第二排 (11~20) 11~17粉紅底色 -->
+        <tr class="highlight-pink"><td>11</td><td>劉宏信 理事長</td><td>中國勞工安全衛生管理學會</td></tr>
+        <tr class="highlight-pink"><td>12</td><td>李國懋 秘書長</td><td>中國勞工安全衛生管理學會</td></tr>
+        <tr class="highlight-pink"><td>13</td><td>吳幸娟</td><td>勞安所</td></tr>
+        <tr class="highlight-pink"><td>14</td><td>劉立文 組長</td><td>勞安所</td></tr>
+        <tr class="highlight-pink"><td>15</td><td>林裕舒 課長</td><td>長春石油化學公司</td></tr>
+        <tr class="highlight-pink"><td>16</td><td>陳志傑 教授</td><td>臺大公衛</td></tr>
+        <tr class="highlight-pink"><td>17</td><td>林瑜雯 教授</td><td>輔仁大學</td></tr>
+        <tr><td>18</td><td>何寧靜</td><td>MSA</td></tr>
+        <tr><td>19</td><td>何明信</td><td>高市勞檢</td></tr>
+        <tr><td>20</td><td>李如曜</td><td>優實安全衛生管理顧問公司</td></tr>
+
+        <!-- 第三排 (21~30) -->
+        <tr><td>21</td><td>盧珮珍</td><td>財團法人職業災害預防及重建中心</td></tr>
+        <tr><td>22</td><td>陳敏正</td><td>中鼎工程</td></tr>
+        <tr><td>23</td><td>李俊賢 Lukas LEE</td><td>國家衛生研究院</td></tr>
+        <tr><td>24</td><td>黃正怡</td><td>勞動部職業安全衛生署中區職業安全衛生中心</td></tr>
+        <tr><td>25</td><td>徐夢為</td><td>GE</td></tr>
+        <tr><td>26</td><td>謝竺廷</td><td>立信工營造股份有限公司</td></tr>
+        <tr><td>27</td><td>林福禹</td><td>力方開發事業股份有限公司</td></tr>
+        <tr><td>28</td><td>張志富</td><td>宏偉營造股份有限公司</td></tr>
+        <tr><td>29</td><td>林彤珈</td><td>威勝營造有限公司</td></tr>
+        <tr><td>30</td><td>謝家倫</td><td>建國工程股份有限公司</td></tr>
+
+        <!-- 第四排 (31~40) -->
+        <tr><td>31</td><td>林政興</td><td>登山營造股份有限公司</td></tr>
+        <tr><td>32</td><td>鄭胡明</td><td>新東陽營造股份有限公司</td></tr>
+        <tr><td>33</td><td>蔣念慈</td><td>復空食品股份有限公司</td></tr>
+        <tr><td>34</td><td>陳柏榕</td><td>帝旺工程有限公司</td></tr>
+        <tr><td>35</td><td>吳浥芸</td><td>金藏營造工程股份有限公司</td></tr>
+        <tr><td>36</td><td>陳識涵</td><td>台創工程技術顧問有限公司</td></tr>
+        <tr><td>37</td><td>林淑如</td><td>元太科技</td></tr>
+        <tr><td>38</td><td>張瑋玨</td><td>晃茂營造</td></tr>
+        <tr><td>39</td><td>林思彤</td><td>根基營造股份有限公司</td></tr>
+        <tr><td>40</td><td>李豐耀</td><td>和撒那通運有限公司</td></tr>
+
+        <!-- 第五排 (41~50) -->
+        <tr><td>41</td><td>陳焜燿</td><td>永祥科技顧問有限公司</td></tr>
+        <tr><td>42</td><td>Lukas JH Lee</td><td>National Health Research Institutes</td></tr>
+        <tr><td>43</td><td>邱芃樺</td><td>臺灣職業衛生服務學會</td></tr>
+        <tr><td>44</td><td>虞善琦</td><td>輔育工會</td></tr>
+        <tr><td>45</td><td>呂柏輝</td><td>財團法人職業災害預防及重建中心</td></tr>
+        <tr><td>46</td><td>王晨珉</td><td>泛亞工程</td></tr>
+        <tr><td>47</td><td>呂映潔</td><td>臺灣職業衛生服務學會</td></tr>
+        <tr><td>48</td><td>吳宜蓁</td><td>成功大學</td></tr>
+        <tr><td>49</td><td>徐雅媛</td><td>勞動部勞動及職業安全衛生研究所</td></tr>
+        <tr><td>50</td><td>賴佳玲</td><td>中福營造股份有限公司</td></tr>
+
+        <!-- 第六排 (51~60) -->
+        <tr><td>51</td><td>林榮竹</td><td>夆典科技開發股份有限公司</td></tr>
+        <tr><td>52</td><td>鐘順輝</td><td>勞動部勞動及職業安全衛生研究所</td></tr>
+        <tr><td>53</td><td>黃詩凱</td><td>臺中市勞動檢查處</td></tr>
+        <tr><td>54</td><td>張文棋</td><td>瀚博職業衛生聯合技師事務所</td></tr>
+        <tr><td>55</td><td>朱偉銘</td><td>輔仁大學</td></tr>
+        <tr><td>56</td><td>朱嘉龍</td><td>元呈</td></tr>
+        <tr><td>57</td><td>李英婷</td><td>財團法人職業災害預防及重建中心</td></tr>
+        <tr><td>58</td><td>林騄潭</td><td>璉嶸營造</td></tr>
+        <tr><td>59</td><td>陳宜傳</td><td>臺灣大學</td></tr>
+        <tr><td>60</td><td>林芷均</td><td>鉅鋼機械</td></tr>
+
+        <!-- 第七排 (61~69) -->
+        <tr><td>61</td><td>翁肇鴻</td><td>方傑有限公司</td></tr>
+        <tr><td>62</td><td>何宗軒</td><td>國立臺灣師範大學</td></tr>
+        <tr><td>63</td><td>潘儀聰</td><td>文化大學</td></tr>
+        <tr><td>64</td><td>范姜孟含</td><td>台灣中油公司</td></tr>
+        <tr><td>65</td><td>李柏宏</td><td>勞動部勞安所</td></tr>
+        <tr><td>66</td><td>陳欣婷</td><td>新北市政府勞動檢查處</td></tr>
+        <tr><td>67</td><td>吳念臻</td><td>新北市勞動檢查處</td></tr>
+        <tr><td>68</td><td>陳春萬</td><td>勞安所</td></tr>
+        <tr><td>69</td><td>李昆哲</td><td>勞安所</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

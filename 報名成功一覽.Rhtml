@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>報名成功人員公告 · 研討會</title>
+    <title>報名成功人員公告 · 研討會（已額滿）</title>
     <style>
         * {
             margin: 0;
@@ -62,40 +62,42 @@
         }
 
         .badge {
-            background: #e0edff;
-            color: #1d4ed8;
+            background: #fef2f2;
+            color: #b91c1c;
+            border: 1px solid #fecaca;
             padding: 0.25rem 0.85rem;
             border-radius: 9999px;
             font-size: 0.88rem;
-            font-weight: 600;
+            font-weight: 700;
         }
 
-        /* 容納人數與剩餘名額警示盒 */
+        /* 額滿醒目標示盒 */
         .capacity-alert {
             display: inline-flex;
             align-items: center;
             flex-wrap: wrap;
-            gap: 0.8rem 1.6rem;
-            background: #fffdf5;
-            border: 2px solid #fbbf24;
-            color: #78350f;
-            padding: 0.65rem 1.3rem;
+            gap: 0.8rem 1.4rem;
+            background: #fef2f2;
+            border: 2px solid #ef4444;
+            color: #991b1b;
+            padding: 0.7rem 1.4rem;
             border-radius: 14px;
-            font-size: 1.02rem;
+            font-size: 1.05rem;
             font-weight: 600;
-            box-shadow: 0 4px 14px rgba(251, 191, 36, 0.18);
+            box-shadow: 0 4px 14px rgba(239, 68, 68, 0.18);
         }
 
         .capacity-alert .highlight {
-            background: #fde68a;
-            color: #451a03;
-            padding: 0.15rem 0.75rem;
+            background: #dc2626;
+            color: #ffffff;
+            padding: 0.2rem 0.85rem;
             border-radius: 20px;
             font-weight: 700;
+            letter-spacing: 0.05em;
         }
 
         .capacity-alert .remain {
-            color: #c2410c;
+            color: #b91c1c;
             font-weight: 800;
             font-size: 1.15rem;
         }
@@ -151,7 +153,7 @@
             font-size: 0.82rem;
         }
 
-        /* 表格區：固定欄寬比例與絕對對齊 */
+        /* 表格區：固定欄寬與對齊 */
         .table-wrapper {
             overflow-x: auto;
             border-radius: 16px;
@@ -230,11 +232,11 @@
         }
 
         .record-count {
-            background: #eff6ff;
-            color: #1e40af;
+            background: #fee2e2;
+            color: #991b1b;
             padding: 0.35rem 1rem;
             border-radius: 9999px;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         @media (max-width: 768px) {
@@ -280,11 +282,13 @@
                 <h1>報名成功人員公告</h1>
                 <div class="subhead">
                     研討會報名成功清單（統計至 11月2日）
-                    <span class="badge">已錄取 54 位</span>
+                    <span class="badge">已額滿 · 錄取 63 位</span>
                 </div>
+                <!-- 額滿顯示 -->
                 <div class="capacity-alert">
-                    <span>📌 場地容納人數：<span class="highlight">60 人</span></span>
-                    <span>🪑 剩餘名額：<span class="remain">6 人</span></span>
+                    <span>📌 場地容納人數：<strong>60 人</strong></span>
+                    <span>🚫 報名狀態：<span class="highlight">已額滿（截止報名）</span></span>
+                    <span>🪑 剩餘名額：<span class="remain">0 人</span></span>
                 </div>
             </div>
             <div class="source-link">
@@ -300,95 +304,4 @@
             <span><i>📅</i> 統計期間：2026-10-20 至 2026-11-02</span>
             <span><i>⏱️</i> 依報名日期序排列（最早在前）</span>
             <span><i>🔒</i> 姓名及單位均以「O」進行去識別化隱碼保護</span>
-        </div>
-
-        <!-- 名單表格 -->
-        <div class="table-wrapper">
-            <table>
-                <colgroup>
-                    <col class="col-date">
-                    <col class="col-name">
-                    <col class="col-unit">
-                </colgroup>
-                <thead>
-                    <tr>
-                        <th>報名日期</th>
-                        <th>姓名</th>
-                        <th>服務單位</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- 10月20日 -->
-                    <tr><td class="date-col">10月20日</td><td class="name-col">蔡O枝</td><td class="unit-col">成O單位/公司</td></tr>
-                    <tr><td class="date-col">10月20日</td><td class="name-col">何O信</td><td class="unit-col">CO單位/公司</td></tr>
-                    <tr><td class="date-col">10月20日</td><td class="name-col">李O曜</td><td class="unit-col">優O單位/公司</td></tr>
-                    <tr><td class="date-col">10月20日</td><td class="name-col">H…</td><td class="unit-col">NO單位/公司</td></tr>
-                    <tr><td class="date-col">10月20日</td><td class="name-col">何O靜</td><td class="unit-col">MO單位/公司</td></tr>
-                    <!-- 10月22日 -->
-                    <tr><td class="date-col">10月22日</td><td class="name-col">盧O珍</td><td class="unit-col">財O單位/公司</td></tr>
-                    <!-- 10月27日 -->
-                    <tr><td class="date-col">10月27日</td><td class="name-col">黃O恩</td><td class="unit-col">中O單位/公司</td></tr>
-                    <tr><td class="date-col">10月27日</td><td class="name-col">陳O正</td><td class="unit-col">中O單位/公司</td></tr>
-                    <!-- 10月28日 -->
-                    <tr><td class="date-col">10月28日</td><td class="name-col">林O舒</td><td class="unit-col">長O單位/公司</td></tr>
-                    <tr><td class="date-col">10月28日</td><td class="name-col">李O賢</td><td class="unit-col">國O單位/公司</td></tr>
-                    <tr><td class="date-col">10月28日</td><td class="name-col">黃O怡</td><td class="unit-col">勞O單位/公司</td></tr>
-                    <tr><td class="date-col">10月28日</td><td class="name-col">徐O為</td><td class="unit-col">GO單位/公司</td></tr>
-                    <tr><td class="date-col">10月28日</td><td class="name-col">謝O廷</td><td class="unit-col">立O單位/公司</td></tr>
-                    <tr><td class="date-col">10月28日</td><td class="name-col">林O禹</td><td class="unit-col">力O單位/公司</td></tr>
-                    <tr><td class="date-col">10月28日</td><td class="name-col">張O富</td><td class="unit-col">宏O單位/公司</td></tr>
-                    <tr><td class="date-col">10月28日</td><td class="name-col">林O珈</td><td class="unit-col">威O單位/公司</td></tr>
-                    <tr><td class="date-col">10月28日</td><td class="name-col">謝O倫</td><td class="unit-col">建O單位/公司</td></tr>
-                    <tr><td class="date-col">10月28日</td><td class="name-col">林O興</td><td class="unit-col">登O單位/公司</td></tr>
-                    <tr><td class="date-col">10月28日</td><td class="name-col">鄭O明</td><td class="unit-col">新O單位/公司</td></tr>
-                    <tr><td class="date-col">10月28日</td><td class="name-col">蔣O慈</td><td class="unit-col">復O單位/公司</td></tr>
-                    <tr><td class="date-col">10月28日</td><td class="name-col">陳O榕</td><td class="unit-col">帝O單位/公司</td></tr>
-                    <tr><td class="date-col">10月28日</td><td class="name-col">吳O芸</td><td class="unit-col">金O單位/公司</td></tr>
-                    <tr><td class="date-col">10月28日</td><td class="name-col">陳O涵</td><td class="unit-col">台O單位/公司</td></tr>
-                    <tr><td class="date-col">10月28日</td><td class="name-col">林O如</td><td class="unit-col">元O單位/公司</td></tr>
-                    <tr><td class="date-col">10月28日</td><td class="name-col">張O玨</td><td class="unit-col">晃O單位/公司</td></tr>
-                    <tr><td class="date-col">10月28日</td><td class="name-col">林O彤</td><td class="unit-col">根O單位/公司</td></tr>
-                    <tr><td class="date-col">10月28日</td><td class="name-col">李O耀</td><td class="unit-col">和O單位/公司</td></tr>
-                    <tr><td class="date-col">10月28日</td><td class="name-col">陳O燿</td><td class="unit-col">永O單位/公司</td></tr>
-                    <tr><td class="date-col">10月28日</td><td class="name-col">Lukas</td><td class="unit-col">NO單位/公司</td></tr>
-                    <tr><td class="date-col">10月28日</td><td class="name-col">邱O樺</td><td class="unit-col">臺O單位/公司</td></tr>
-                    <tr><td class="date-col">10月28日</td><td class="name-col">虞O琦</td><td class="unit-col">輔O單位/公司</td></tr>
-                    <!-- 10月29日 -->
-                    <tr><td class="date-col">10月29日</td><td class="name-col">呂O輝</td><td class="unit-col">財O單位/公司</td></tr>
-                    <tr><td class="date-col">10月29日</td><td class="name-col">王O珉</td><td class="unit-col">泛O單位/公司</td></tr>
-                    <tr><td class="date-col">10月29日</td><td class="name-col">呂O潔</td><td class="unit-col">臺O單位/公司</td></tr>
-                    <tr><td class="date-col">10月29日</td><td class="name-col">吳O蓁</td><td class="unit-col">成O單位/公司</td></tr>
-                    <tr><td class="date-col">10月29日</td><td class="name-col">徐O媛</td><td class="unit-col">勞O單位/公司</td></tr>
-                    <tr><td class="date-col">10月29日</td><td class="name-col">賴O玲</td><td class="unit-col">中O單位/公司</td></tr>
-                    <tr><td class="date-col">10月29日</td><td class="name-col">林O竹</td><td class="unit-col">夆O單位/公司</td></tr>
-                    <tr><td class="date-col">10月29日</td><td class="name-col">鐘O輝</td><td class="unit-col">勞O單位/公司</td></tr>
-                    <tr><td class="date-col">10月29日</td><td class="name-col">黃O凱</td><td class="unit-col">臺O單位/公司</td></tr>
-                    <!-- 10月30日（新增） -->
-                    <tr><td class="date-col">10月30日</td><td class="name-col">張O棋</td><td class="unit-col">瀚O單位/公司</td></tr>
-                    <tr><td class="date-col">10月30日</td><td class="name-col">莊O哲</td><td class="unit-col">長O單位/公司</td></tr>
-                    <tr><td class="date-col">10月30日</td><td class="name-col">朱O銘</td><td class="unit-col">輔O單位/公司</td></tr>
-                    <tr><td class="date-col">10月30日</td><td class="name-col">朱O龍</td><td class="unit-col">元O單位/公司</td></tr>
-                    <tr><td class="date-col">10月30日</td><td class="name-col">李O婷</td><td class="unit-col">財O單位/公司</td></tr>
-                    <tr><td class="date-col">10月30日</td><td class="name-col">林O潭</td><td class="unit-col">璉O單位/公司</td></tr>
-                    <tr><td class="date-col">10月30日</td><td class="name-col">陳O傳</td><td class="unit-col">臺O單位/公司</td></tr>
-                    <tr><td class="date-col">10月30日</td><td class="name-col">林O均</td><td class="unit-col">鉅O單位/公司</td></tr>
-                    <tr><td class="date-col">10月30日</td><td class="name-col">陳O傑</td><td class="unit-col">臺O單位/公司</td></tr>
-                    <tr><td class="date-col">10月30日</td><td class="name-col">林O雯</td><td class="unit-col">輔O單位/公司</td></tr>
-                    <!-- 10月31日（新增） -->
-                    <tr><td class="date-col">10月31日</td><td class="name-col">翁O鴻</td><td class="unit-col">方O單位/公司</td></tr>
-                    <tr><td class="date-col">10月31日</td><td class="name-col">何O軒</td><td class="unit-col">國O單位/公司</td></tr>
-                    <tr><td class="date-col">10月31日</td><td class="name-col">潘O聰</td><td class="unit-col">文O單位/公司</td></tr>
-                    <!-- 11月2日（新增） -->
-                    <tr><td class="date-col">11月2日</td><td class="name-col">范O含</td><td class="unit-col">台O單位/公司</td></tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- 頁尾宣告 -->
-        <div class="footer-note">
-            <div class="record-count">📋 共 54 筆報名成功紀錄（統計期間：10/20–11/02）</div>
-            <div>⏱️ 最後更新日期：2026年11月2日 · 名額即將額滿</div>
-        </div>
-    </div>
-</body>
-</html>
+            <span><i>⚠️</i> 本場
