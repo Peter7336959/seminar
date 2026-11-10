@@ -7,6 +7,8 @@ date-format: "YYYY-MM-DD dddd"
 ---
 
 ::: {.callout-note appearance="simple"}
+- **115-11-10** 新增2位特邀講座簡報檔 （參見議程表）
+
 - **115-11-03** **公告** 報名額滿 (感謝參與)
 
 - **舉辦日期：115-11-10**
@@ -242,7 +244,7 @@ date-format: "YYYY-MM-DD dddd"
 <tr class="highlight-row">
 <td class="time-col">1300-1340 (30分鐘+10分鐘QA)</td>
 <td class="topic-cell">
-議題三　<a href="郭浩然老師＿研討會摘要.pdf" target="_blank" >新興零工經濟引發之職業衛生危害：數位平台工作者的負面健康效應議題<br>
+議題三　<a href="郭浩然老師＿研討會摘要.pdf" target="_blank" >新興零工經濟引發之職業衛生危害：數位平台工作者的負面健康效應議題 <a href="李昆樺2 Potential Health Effects on Platform Workers.pdf" target="_blank" >(簡報)<br>
 <span class="speaker-name">郭浩然 教授</span>
 </td>
 </tr>
@@ -260,7 +262,7 @@ date-format: "YYYY-MM-DD dddd"
 <tr class="highlight-row">
 <td class="time-col">1440-1520 (30分鐘+10分鐘QA)</td>
 <td class="topic-cell">
-議題五　<a href="林韋呈老師_研討會摘要.pdf" target="_blank" >重大化學風險管理的新趨勢：從 SDS 危害資訊深化到 QRA 持續重評<br>
+議題五　<a href="林韋呈老師_研討會摘要.pdf" target="_blank" >重大化學風險管理的新趨勢：從 SDS 危害資訊深化到 QRA 持續重評  <a href="重大化學風險管理的新趨勢20261110.pdf" target="_blank" >(簡報)<br>
 <span class="speaker-name">林韋呈 博士</span>
 </td>
 </tr>
